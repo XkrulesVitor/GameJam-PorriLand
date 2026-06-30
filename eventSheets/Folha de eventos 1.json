@@ -9872,6 +9872,15 @@
                     "type": "once",
                     "tag": "\"Dilema\""
                   }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000030,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma + 2"
+                  }
                 }
               ],
               "sid": 559479576955054,
@@ -9996,6 +10005,15 @@
                   "id": "move-to-top",
                   "objectClass": "MarcadorAlvoOracao",
                   "sid": 959931256293650
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000034,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma - 3"
+                  }
                 }
               ],
               "sid": 373876530974337
@@ -10055,6 +10073,24 @@
                   "id": "move-to-top",
                   "objectClass": "MarcadorAlvoOracao",
                   "sid": 516631721963673
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000035,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma + 2"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000036,
+                  "parameters": {
+                    "variable": "Voz_Acalmou",
+                    "value": "1"
+                  }
                 }
               ],
               "sid": 757957590032529
@@ -10304,6 +10340,15 @@
                     "type": "once",
                     "tag": "\"Dilema\""
                   }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000031,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma - 2"
+                  }
                 }
               ],
               "sid": 945715485610568,
@@ -10466,6 +10511,24 @@
                     "type": "once",
                     "tag": "\"Dilema\""
                   }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000032,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma + 3"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000033,
+                  "parameters": {
+                    "variable": "Justica_Perdoou",
+                    "value": "1"
+                  }
                 }
               ],
               "sid": 487473658225333
@@ -10550,6 +10613,15 @@
                     "duration": "random(90,150)",
                     "type": "once",
                     "tag": "\"Dilema\""
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000037,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma - 2"
                   }
                 }
               ],
