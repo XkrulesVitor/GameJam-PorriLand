@@ -10291,7 +10291,7 @@
               "sid": 444544813994947,
               "parameters": {
                 "variable": "Dilema_Tipo",
-                "value": "Porri_Adepto.Count < 2 ? \"Festa_Esperanca\" : choose(\"Festa_Esperanca\", \"Justica_Vizinho\", \"Voz_Acalma\")"
+                "value": "Porri_Adepto.Count < 2 ? \"Festa_Esperanca\" : choose(\"Festa_Esperanca\", \"Justica_Vizinho\", \"Voz_Acalma\", \"Herege\")"
               }
             },
             {
@@ -10704,6 +10704,48 @@
                 }
               ],
               "sid": 328247570868058
+            },
+            {
+              "eventType": "block",
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000101,
+                  "parameters": {
+                    "first-value": "Dilema_Tipo",
+                    "comparison": 0,
+                    "second-value": "\"Herege\""
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000102,
+                  "parameters": {
+                    "text": "\"HERESIA\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000103,
+                  "parameters": {
+                    "text": "\"ELE ESTAVA ME PREGANDO\" & newline & \"CONTRA EM VOZ ALTA.\" & newline & \"ISSO É PERMITIDO?\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000104,
+                  "parameters": {
+                    "text": "\"SIM SILENCIAR\" & newline & \"-3 KARMA\" & newline & \"+8 FÉ\" & newline & \"ADEPTO VIRA CÉTICO\" & newline & newline & \"NÃO DEIXAR FALAR\" & newline & \"+3 KARMA\" & newline & \"-5 FÉ\" & newline & \"+20 FELICIDADE\""
+                  }
+                }
+              ],
+              "sid": 990000000000100
             }
           ]
         },
@@ -11172,6 +11214,120 @@
                 }
               ],
               "sid": 757957590032529
+            },
+            {
+              "eventType": "block",
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000106,
+                  "parameters": {
+                    "first-value": "Dilema_Tipo",
+                    "comparison": 0,
+                    "second-value": "\"Herege\""
+                  }
+                },
+                {
+                  "id": "pick-by-comparison",
+                  "objectClass": "System",
+                  "sid": 990000000000114,
+                  "parameters": {
+                    "object": "Porri_Adepto",
+                    "expression": "Porri_Adepto.UID",
+                    "comparison": 0,
+                    "value": "Dilema_Dono_UID"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000107,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma - 3"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000108,
+                  "parameters": {
+                    "variable": "Fe",
+                    "value": "min(100, Fe + 8)"
+                  }
+                },
+                {
+                  "id": "create-object",
+                  "objectClass": "System",
+                  "sid": 990000000000115,
+                  "parameters": {
+                    "object-to-create": "Porri_Cetico",
+                    "layer": "1",
+                    "x": "Porri_Adepto.X",
+                    "y": "Porri_Adepto.Y",
+                    "create-hierarchy": false,
+                    "template-name": "\"\""
+                  }
+                },
+                {
+                  "id": "start-timer",
+                  "objectClass": "Porri_Cetico",
+                  "sid": 990000000000116,
+                  "behaviorType": "CronÃ´metro",
+                  "parameters": {
+                    "duration": "random(0.5,2.5)",
+                    "type": "regular",
+                    "tag": "\"Andar\""
+                  }
+                },
+                {
+                  "id": "destroy",
+                  "objectClass": "Porri_Adepto",
+                  "sid": 990000000000117
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000118,
+                  "parameters": {
+                    "variable": "Dilema_Tipo",
+                    "value": "\"\""
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000119,
+                  "parameters": {
+                    "variable": "Dilema_Dono_UID",
+                    "value": "-1"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000120,
+                  "parameters": {
+                    "variable": "Dilema_Alvo_UID",
+                    "value": "-1"
+                  }
+                },
+                {
+                  "id": "start-timer",
+                  "objectClass": "Controlador",
+                  "sid": 990000000000121,
+                  "behaviorType": "CronÃ´metro",
+                  "parameters": {
+                    "duration": "random(90,150)",
+                    "type": "once",
+                    "tag": "\"Dilema\""
+                  }
+                }
+              ],
+              "sid": 990000000000105
             }
           ]
         },
@@ -11704,6 +11860,109 @@
                 }
               ],
               "sid": 231857644796178
+            },
+            {
+              "eventType": "block",
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000110,
+                  "parameters": {
+                    "first-value": "Dilema_Tipo",
+                    "comparison": 0,
+                    "second-value": "\"Herege\""
+                  }
+                },
+                {
+                  "id": "pick-by-comparison",
+                  "objectClass": "System",
+                  "sid": 990000000000122,
+                  "parameters": {
+                    "object": "Porri_Adepto",
+                    "expression": "Porri_Adepto.UID",
+                    "comparison": 0,
+                    "value": "Dilema_Dono_UID"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000111,
+                  "parameters": {
+                    "variable": "Karma",
+                    "value": "Karma + 3"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000112,
+                  "parameters": {
+                    "variable": "Fe",
+                    "value": "max(0, Fe - 5)"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000113,
+                  "parameters": {
+                    "variable": "Herege_Permitiu",
+                    "value": "1"
+                  }
+                },
+                {
+                  "id": "set-instvar-value",
+                  "objectClass": "Porri_Adepto",
+                  "sid": 990000000000123,
+                  "parameters": {
+                    "instance-variable": "Felicidade",
+                    "value": "min(100, Porri_Adepto.Felicidade + 20)"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000124,
+                  "parameters": {
+                    "variable": "Dilema_Tipo",
+                    "value": "\"\""
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000125,
+                  "parameters": {
+                    "variable": "Dilema_Dono_UID",
+                    "value": "-1"
+                  }
+                },
+                {
+                  "id": "set-eventvar-value",
+                  "objectClass": "System",
+                  "sid": 990000000000126,
+                  "parameters": {
+                    "variable": "Dilema_Alvo_UID",
+                    "value": "-1"
+                  }
+                },
+                {
+                  "id": "start-timer",
+                  "objectClass": "Controlador",
+                  "sid": 990000000000127,
+                  "behaviorType": "CronÃ´metro",
+                  "parameters": {
+                    "duration": "random(90,150)",
+                    "type": "once",
+                    "tag": "\"Dilema\""
+                  }
+                }
+              ],
+              "sid": 990000000000109
             }
           ]
         },
