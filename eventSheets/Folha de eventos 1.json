@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "Folha de eventos 1",
     "events": [
         {
@@ -4838,7 +4838,7 @@
                                     "objectClass": "Txt_Estado",
                                     "sid": 154099026125470,
                                     "parameters": {
-                                        "text": "\"Ceticismo\""
+                                        "text": "\"Skepticism\""
                                     }
                                 }
                             ],
@@ -4881,7 +4881,7 @@
                                     "objectClass": "Txt_Estado",
                                     "sid": 989553544338398,
                                     "parameters": {
-                                        "text": "\"Equilibrado\""
+                                        "text": "\"Balanced\""
                                     }
                                 }
                             ],
@@ -4924,7 +4924,7 @@
                                     "objectClass": "Txt_Estado",
                                     "sid": 983109599449585,
                                     "parameters": {
-                                        "text": "\"Fanatismo\""
+                                        "text": "\"Fanaticism\""
                                     }
                                 }
                             ],
@@ -6344,7 +6344,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 990000000000072,
                                     "parameters": {
-                                        "text": "\"O DEUS VIVO\""
+                                        "text": "\"THE LIVING GOD\""
                                     }
                                 },
                                 {
@@ -6421,7 +6421,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 990000000000077,
                                     "parameters": {
-                                        "text": "\"A PARTIDA\""
+                                        "text": "\"THE DEPARTURE\""
                                     }
                                 },
                                 {
@@ -6518,7 +6518,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 990000000000084,
                                     "parameters": {
-                                        "text": "\"O SENHOR\""
+                                        "text": "\"THE LORD\""
                                     }
                                 },
                                 {
@@ -6615,7 +6615,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 990000000000091,
                                     "parameters": {
-                                        "text": "\"O PASTOR\""
+                                        "text": "\"THE SHEPHERD\""
                                     }
                                 },
                                 {
@@ -7431,7 +7431,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101559,
                                     "parameters": {
-                                        "text": "\"O DEUS VIVO\""
+                                        "text": "\"THE LIVING GOD\""
                                     }
                                 },
                                 {
@@ -7500,7 +7500,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101565,
                                     "parameters": {
-                                        "text": "\"A PARTIDA\""
+                                        "text": "\"THE DEPARTURE\""
                                     }
                                 },
                                 {
@@ -7589,7 +7589,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101573,
                                     "parameters": {
-                                        "text": "\"O SENHOR\""
+                                        "text": "\"THE LORD\""
                                     }
                                 },
                                 {
@@ -7678,7 +7678,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101581,
                                     "parameters": {
-                                        "text": "\"O PASTOR\""
+                                        "text": "\"THE SHEPHERD\""
                                     }
                                 },
                                 {
@@ -8486,7 +8486,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101673,
                                     "parameters": {
-                                        "text": "\"O DEUS VIVO\""
+                                        "text": "\"THE LIVING GOD\""
                                     }
                                 },
                                 {
@@ -8555,7 +8555,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101679,
                                     "parameters": {
-                                        "text": "\"A PARTIDA\""
+                                        "text": "\"THE DEPARTURE\""
                                     }
                                 },
                                 {
@@ -8644,7 +8644,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101687,
                                     "parameters": {
-                                        "text": "\"O SENHOR\""
+                                        "text": "\"THE LORD\""
                                     }
                                 },
                                 {
@@ -8733,7 +8733,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 998291389101695,
                                     "parameters": {
-                                        "text": "\"O PASTOR\""
+                                        "text": "\"THE SHEPHERD\""
                                     }
                                 },
                                 {
@@ -13462,7 +13462,7 @@
                             "objectClass": "sf_Objetivos",
                             "sid": 713778523291050,
                             "parameters": {
-                                "text": "\"- - OBJETIVOS - -\" & newline & \"FASE: \" & (Era=1 ? \"TRIBO\" : (Era=2 ? \"VILA\" : \"CIDADE\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 25 ? \"[X] 25 ADEPTOS\" : \"[ ] 25 ADEPTOS\") : (Era=2 ? (Porri_Adepto.Count >= 60 ? \"[X] 60 ADEPTOS\" : \"[ ] 60 ADEPTOS\") : (Porri_Adepto.Count >= 120 ? \"[X] 120 ADEPTOS\" : \"[ ] 120 ADEPTOS\"))) & newline & \"   (Atual: \" & Porri_Adepto.Count & (Era=1 ? \"/25)\" : (Era=2 ? \"/60)\" : \"/120)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FE 50 A 70\" : \"[ ] FE 50 A 70\") : \"[ ] FE 50 A 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FE 40 A 80\" : \"[ ] FE 40 A 80\") : \"[ ] FE 40 A 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FE 45 A 75\" : \"[ ] FE 45 A 75\") : \"[ ] FE 45 A 75\"))) & newline & \"   (Atual: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] MANTER 5 SEG\" : \"[ ] MANTER 5 SEG\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] MANTER 10 SEG\" : \"[ ] MANTER 10 SEG\") : (Tempo_Equilibrio >= 15 ? \"[X] MANTER 15 SEG\" : \"[ ] MANTER 15 SEG\"))) & newline & \"   (Atual: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLUIR <<\" : \">> COMPLETE TUDO <<\")"
+                                "text": "\"- - OBJECTIVES - -\" & newline & \"PHASE: \" & (Era=1 ? \"TRIBE\" : (Era=2 ? \"VILLAGE\" : \"CITY\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 25 ? \"[X] 25 FOLLOWERS\" : \"[ ] 25 FOLLOWERS\") : (Era=2 ? (Porri_Adepto.Count >= 60 ? \"[X] 60 FOLLOWERS\" : \"[ ] 60 FOLLOWERS\") : (Porri_Adepto.Count >= 120 ? \"[X] 120 FOLLOWERS\" : \"[ ] 120 FOLLOWERS\"))) & newline & \"   (Current: \" & Porri_Adepto.Count & (Era=1 ? \"/25)\" : (Era=2 ? \"/60)\" : \"/120)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FAITH 50 TO 70\" : \"[ ] FAITH 50 TO 70\") : \"[ ] FAITH 50 TO 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FAITH 40 TO 80\" : \"[ ] FAITH 40 TO 80\") : \"[ ] FAITH 40 TO 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FAITH 45 TO 75\" : \"[ ] FAITH 45 TO 75\") : \"[ ] FAITH 45 TO 75\"))) & newline & \"   (Current: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] HOLD 5 SEC\" : \"[ ] HOLD 5 SEC\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] HOLD 10 SEC\" : \"[ ] HOLD 10 SEC\") : (Tempo_Equilibrio >= 15 ? \"[X] HOLD 15 SEC\" : \"[ ] HOLD 15 SEC\"))) & newline & \"   (Current: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLVE <<\" : \">> COMPLETE ALL <<\")"
                             }
                         }
                     ],
@@ -13483,7 +13483,7 @@
                             "objectClass": "sf_Objetivos",
                             "sid": 199300351196504,
                             "parameters": {
-                                "text": "\"- - OBJETIVOS - -\" & newline & \"FASE: \" & (Era=1 ? \"TRIBO\" : (Era=2 ? \"VILA\" : \"CIDADE\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 25 ? \"[X] 25 ADEPTOS\" : \"[ ] 25 ADEPTOS\") : (Era=2 ? (Porri_Adepto.Count >= 60 ? \"[X] 60 ADEPTOS\" : \"[ ] 60 ADEPTOS\") : (Porri_Adepto.Count >= 120 ? \"[X] 120 ADEPTOS\" : \"[ ] 120 ADEPTOS\"))) & newline & \"   (Atual: \" & Porri_Adepto.Count & (Era=1 ? \"/25)\" : (Era=2 ? \"/60)\" : \"/120)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FE 50 A 70\" : \"[ ] FE 50 A 70\") : \"[ ] FE 50 A 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FE 40 A 80\" : \"[ ] FE 40 A 80\") : \"[ ] FE 40 A 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FE 45 A 75\" : \"[ ] FE 45 A 75\") : \"[ ] FE 45 A 75\"))) & newline & \"   (Atual: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] MANTER 5 SEG\" : \"[ ] MANTER 5 SEG\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] MANTER 10 SEG\" : \"[ ] MANTER 10 SEG\") : (Tempo_Equilibrio >= 15 ? \"[X] MANTER 15 SEG\" : \"[ ] MANTER 15 SEG\"))) & newline & \"   (Atual: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLUIR <<\" : \">> COMPLETE TUDO <<\")"
+                                "text": "\"- - OBJECTIVES - -\" & newline & \"PHASE: \" & (Era=1 ? \"TRIBE\" : (Era=2 ? \"VILLAGE\" : \"CITY\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 25 ? \"[X] 25 FOLLOWERS\" : \"[ ] 25 FOLLOWERS\") : (Era=2 ? (Porri_Adepto.Count >= 60 ? \"[X] 60 FOLLOWERS\" : \"[ ] 60 FOLLOWERS\") : (Porri_Adepto.Count >= 120 ? \"[X] 120 FOLLOWERS\" : \"[ ] 120 FOLLOWERS\"))) & newline & \"   (Current: \" & Porri_Adepto.Count & (Era=1 ? \"/25)\" : (Era=2 ? \"/60)\" : \"/120)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FAITH 50 TO 70\" : \"[ ] FAITH 50 TO 70\") : \"[ ] FAITH 50 TO 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FAITH 40 TO 80\" : \"[ ] FAITH 40 TO 80\") : \"[ ] FAITH 40 TO 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FAITH 45 TO 75\" : \"[ ] FAITH 45 TO 75\") : \"[ ] FAITH 45 TO 75\"))) & newline & \"   (Current: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] HOLD 5 SEC\" : \"[ ] HOLD 5 SEC\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] HOLD 10 SEC\" : \"[ ] HOLD 10 SEC\") : (Tempo_Equilibrio >= 15 ? \"[X] HOLD 15 SEC\" : \"[ ] HOLD 15 SEC\"))) & newline & \"   (Current: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLVE <<\" : \">> COMPLETE ALL <<\")"
                             }
                         }
                     ],
@@ -15604,7 +15604,7 @@
                                     "objectClass": "sf_Dilema_Titulo",
                                     "sid": 990000000000183,
                                     "parameters": {
-                                        "text": "\"O PASTOR\""
+                                        "text": "\"THE SHEPHERD\""
                                     }
                                 },
                                 {

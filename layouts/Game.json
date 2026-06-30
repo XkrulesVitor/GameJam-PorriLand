@@ -2158,6 +2158,8 @@
 						"Ultimo_Y": 0,
 						"Altura_Padrão": 0,
 						"Largura_Padrão": 0,
+						"Variacao": 0,
+						"IsCrianca": 0,
 						"modelo": true,
 						"Tempo_Agarrao": 0,
 						"Alvo_UID": 0
@@ -2182,9 +2184,6 @@
 								"isometric": false
 							}
 						},
-						"Cronômetro": {
-							"properties": {}
-						},
 						"CampoDeVisão": {
 							"properties": {
 								"obstacles": "solids",
@@ -2199,6 +2198,12 @@
 								"use-instance-tags": false,
 								"tags": ""
 							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Cronômetro": {
+							"properties": {}
 						},
 						"Pathfinding": {
 							"properties": {
@@ -2666,7 +2671,7 @@
 					"type": "Afogamento",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animação 1",
+						"initial-animation": "Adepto",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2779,35 +2784,6 @@
 			"name": "Menu",
 			"overriden": 0,
 			"subLayers": [],
-			"sid": 999000000000008,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0,
-				0,
-				0,
-				1
-			],
-			"isTransparent": true,
-			"sampling": "auto",
-			"parallaxX": 0,
-			"parallaxY": 0,
-			"scaleRate": 0,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false,
 			"instances": [
 				{
 					"type": "Imagem_Menu",
@@ -2959,15 +2935,10 @@
 						"angle": 0
 					}
 				}
-			]
-		},
-		{
-			"name": "Tutorial",
-			"overriden": 0,
-			"subLayers": [],
-			"sid": 999000000000009,
+			],
+			"sid": 999000000000008,
 			"effectTypes": [],
-			"isInitiallyVisible": false,
+			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
@@ -2993,7 +2964,12 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": false,
+			"global": false
+		},
+		{
+			"name": "Tutorial",
+			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "Filtro_Dilema",
@@ -3306,16 +3282,11 @@
 						"angle": 0
 					}
 				}
-			]
-		},
-		{
-			"name": "Cursor",
-			"overriden": 0,
-			"subLayers": [],
-			"sid": 999000000002010,
+			],
+			"sid": 999000000000009,
 			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": false,
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
 				1,
@@ -3340,7 +3311,12 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": false,
+			"global": false
+		},
+		{
+			"name": "Cursor",
+			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "UI_Mouse",
@@ -3375,7 +3351,36 @@
 						"angle": 0
 					}
 				}
-			]
+			],
+			"sid": 999000000002010,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": false,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 0,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
 	"sid": 407076415244941,
