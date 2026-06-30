@@ -1,0 +1,10 @@
+{
+  "name": "sf_Tutorial_Corpo",
+  "plugin-id": "Text",
+  "sid": 999000000000004,
+  "isGlobal": false,
+  "editorNewInstanceIsReplica": true,
+  "instanceVariables": [],
+  "behaviorTypes": [],
+  "effectTypes": []
+}

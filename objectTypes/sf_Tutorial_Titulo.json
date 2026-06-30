@@ -1,0 +1,10 @@
+{
+  "name": "sf_Tutorial_Titulo",
+  "plugin-id": "Text",
+  "sid": 999000000000003,
+  "isGlobal": false,
+  "editorNewInstanceIsReplica": true,
+  "instanceVariables": [],
+  "behaviorTypes": [],
+  "effectTypes": []
+}

@@ -1,0 +1,10 @@
+{
+  "name": "btn_Tutorial_Anterior",
+  "plugin-id": "Text",
+  "sid": 999000000000006,
+  "isGlobal": false,
+  "editorNewInstanceIsReplica": true,
+  "instanceVariables": [],
+  "behaviorTypes": [],
+  "effectTypes": []
+}

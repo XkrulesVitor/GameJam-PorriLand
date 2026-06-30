@@ -132,7 +132,13 @@
 			"UI_Pedra",
 			"FonteDeSprites",
 			"Elemento_Casa",
-			"Afogamento"
+			"Afogamento",
+			"sf_Menu_Botao",
+			"sf_Tutorial_Titulo",
+			"sf_Tutorial_Corpo",
+			"btn_Tutorial_Proximo",
+			"btn_Tutorial_Anterior",
+			"btn_Reiniciar"
 		],
 		"subfolders": []
 	},
