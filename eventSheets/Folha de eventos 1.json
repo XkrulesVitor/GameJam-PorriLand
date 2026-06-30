@@ -9997,7 +9997,7 @@
 									"sid": 998291389101723,
 									"parameters": {
 										"variable": "Fe",
-										"value": "clamp(Fe + 15, 0, 100)"
+										"value": "clamp(Fe - 10, 0, 100)"
 									}
 								},
 								{
@@ -10025,19 +10025,6 @@
 									"parameters": {
 										"variable": "Raio_Nunca_Adepto",
 										"value": "0"
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 998291389101727,
-									"parameters": {
-										"object-to-create": "Porri_Cetico",
-										"layer": "1",
-										"x": "Porri_Adepto.X",
-										"y": "Porri_Adepto.Y",
-										"create-hierarchy": false,
-										"template-name": "\"\""
 									}
 								},
 								{
@@ -10071,7 +10058,66 @@
 									"parameters": {}
 								}
 							],
-							"children": []
+							"children": [
+								{
+									"eventType": "block",
+									"sid": 998291389101800,
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 998291389101801,
+											"parameters": {
+												"object": "Porri_Adepto",
+												"expression": "distance(Porri_Adepto.X, Porri_Adepto.Y, Raio.X, Raio.Y)",
+												"comparison": 3,
+												"value": "150"
+											}
+										},
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 998291389101802,
+											"parameters": {
+												"object": "Porri_Adepto",
+												"expression": "Porri_Adepto.Felicidade",
+												"comparison": 3,
+												"value": "min(Porri_Adepto.Felicidade)"
+											}
+										},
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 998291389101803,
+											"parameters": {
+												"object": "Porri_Adepto"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 998291389101804,
+											"parameters": {
+												"object-to-create": "Porri_Cetico",
+												"layer": "1",
+												"x": "Porri_Adepto.X",
+												"y": "Porri_Adepto.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Porri_Adepto",
+											"sid": 998291389101805,
+											"parameters": {}
+										}
+									],
+									"children": []
+								}
+							]
 						}
 					],
 					"sid": 952786311894588
