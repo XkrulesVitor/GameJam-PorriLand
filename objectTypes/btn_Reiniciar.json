@@ -1,10 +1,10 @@
 {
-  "name": "btn_Reiniciar",
-  "plugin-id": "Text",
-  "sid": 999000000000007,
-  "isGlobal": false,
-  "editorNewInstanceIsReplica": true,
-  "instanceVariables": [],
-  "behaviorTypes": [],
-  "effectTypes": []
+	"name": "btn_Reiniciar",
+	"plugin-id": "Text",
+	"sid": 999000000000007,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
 }

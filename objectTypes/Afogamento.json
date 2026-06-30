@@ -10,16 +10,10 @@
 	"animations": {
 		"items": [
 			{
-				"name": "Adepto",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 15,
 				"frames": [
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -44,8 +38,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -70,8 +64,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -96,8 +90,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -122,8 +116,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -148,8 +142,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -174,8 +168,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -200,8 +194,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -226,8 +220,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -252,8 +246,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -278,8 +272,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -304,8 +298,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -330,8 +324,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -356,8 +350,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -382,8 +376,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -408,8 +402,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -434,8 +428,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -460,8 +454,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -486,8 +480,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -512,8 +506,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -538,8 +532,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -564,8 +558,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -590,8 +584,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -616,8 +610,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -642,8 +636,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -668,8 +662,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -694,8 +688,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -720,8 +714,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -746,8 +740,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -772,8 +766,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -798,8 +792,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -824,8 +818,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -850,8 +844,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -876,8 +870,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -902,8 +896,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -928,8 +922,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -954,8 +948,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -980,8 +974,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1006,8 +1000,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1032,8 +1026,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1058,8 +1052,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1084,8 +1078,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1110,8 +1104,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1136,8 +1130,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1162,8 +1156,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1188,8 +1182,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1213,19 +1207,20 @@
 						"duration": 1,
 						"tag": ""
 					}
-				]
-			},
-			{
-				"name": "Cetico",
+				],
+				"sid": 130607151588936,
+				"name": "Adepto",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 15,
+				"speed": 15
+			},
+			{
 				"frames": [
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1250,8 +1245,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1276,8 +1271,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1302,8 +1297,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1328,8 +1323,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1354,8 +1349,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1380,8 +1375,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1406,8 +1401,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1432,8 +1427,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1458,8 +1453,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1484,8 +1479,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1510,8 +1505,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1536,8 +1531,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1562,8 +1557,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1588,8 +1583,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1614,8 +1609,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1640,8 +1635,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1666,8 +1661,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1692,8 +1687,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1718,8 +1713,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1744,8 +1739,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1770,8 +1765,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1796,8 +1791,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1822,8 +1817,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1848,8 +1843,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1874,8 +1869,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1900,8 +1895,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1926,8 +1921,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1952,8 +1947,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -1978,8 +1973,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2004,8 +1999,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2030,8 +2025,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2056,8 +2051,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2082,8 +2077,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2108,8 +2103,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2134,8 +2129,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2160,8 +2155,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2186,8 +2181,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2212,8 +2207,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2238,8 +2233,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2264,8 +2259,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2290,8 +2285,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2316,8 +2311,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2342,8 +2337,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2368,8 +2363,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2394,8 +2389,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2419,19 +2414,20 @@
 						"duration": 1,
 						"tag": ""
 					}
-				]
-			},
-			{
-				"name": "Fanatico",
+				],
+				"sid": 384045634318142,
+				"name": "Cetico",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 15,
+				"speed": 15
+			},
+			{
 				"frames": [
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2456,8 +2452,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2482,8 +2478,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2508,8 +2504,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2534,8 +2530,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2560,8 +2556,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2586,8 +2582,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2612,8 +2608,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2638,8 +2634,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2664,8 +2660,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2690,8 +2686,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2716,8 +2712,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2742,8 +2738,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2768,8 +2764,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2794,8 +2790,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2820,8 +2816,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2846,8 +2842,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2872,8 +2868,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2898,8 +2894,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2924,8 +2920,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2950,8 +2946,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -2976,8 +2972,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3002,8 +2998,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3028,8 +3024,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3054,8 +3050,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3080,8 +3076,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3106,8 +3102,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3132,8 +3128,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3158,8 +3154,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3184,8 +3180,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3210,8 +3206,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3236,8 +3232,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3262,8 +3258,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3288,8 +3284,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3314,8 +3310,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3340,8 +3336,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3366,8 +3362,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3392,8 +3388,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3418,8 +3414,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3444,8 +3440,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3470,8 +3466,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3496,8 +3492,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3522,8 +3518,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3548,8 +3544,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3574,8 +3570,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3600,8 +3596,8 @@
 						"tag": ""
 					},
 					{
-						"width": 91,
-						"height": 91,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -3625,7 +3621,14 @@
 						"duration": 1,
 						"tag": ""
 					}
-				]
+				],
+				"sid": 853753484716834,
+				"name": "Fanatico",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
 			}
 		],
 		"subfolders": []

@@ -1,0 +1,105 @@
+{
+	"name": "btn_prev_next",
+	"plugin-id": "Sprite",
+	"sid": 638370738625185,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 29,
+						"height": 35,
+						"originX": 0.603448275862069,
+						"originY": 0.5428571428571428,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 146779,
+						"collisionPoly": {
+							"points": [
+								0.13793103448275862,
+								0.05714285714285714,
+								0.8620689655172413,
+								0.05714285714285714,
+								0.9310344827586206,
+								0.11428571428571428,
+								0.9310344827586206,
+								0.8857142857142857,
+								0.8620689655172413,
+								0.9428571428571428,
+								0.13793103448275862,
+								0.9428571428571428,
+								0.06896551724137931,
+								0.8857142857142857,
+								0.06896551724137931,
+								0.11428571428571428
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 663200788453916,
+				"name": "Fechado",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 29,
+						"height": 35,
+						"originX": 0.4482758620689655,
+						"originY": 0.5571428571428572,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1657978,
+						"collisionPoly": {
+							"points": [
+								0.13793103448275862,
+								0.05714285714285714,
+								0.8620689655172413,
+								0.05714285714285714,
+								0.9310344827586207,
+								0.11428571428571428,
+								0.9310344827586207,
+								0.8857142857142857,
+								0.8620689655172413,
+								0.9428571428571428,
+								0.13793103448275862,
+								0.9428571428571428,
+								0.06896551724137931,
+								0.8857142857142857,
+								0.06896551724137931,
+								0.11428571428571428
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 318294207962900,
+				"name": "Aberto",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

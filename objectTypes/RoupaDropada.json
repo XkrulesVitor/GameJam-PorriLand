@@ -1,116 +1,116 @@
 {
-  "name": "RoupaDropada",
-  "plugin-id": "Sprite",
-  "isGlobal": false,
-  "instanceVariables": [],
-  "behaviorTypes": [
-    {
-      "behaviorId": "Flash",
-      "name": "Flash",
-      "sid": 6957968
-    }
-  ],
-  "effectTypes": [],
-  "animations": {
-    "items": [
-      {
-        "frames": [
-          {
-            "width": 39,
-            "height": 66,
-            "originX": 0.5,
-            "originY": 0.5,
-            "originalSource": "",
-            "exportFormat": "lossless",
-            "exportQuality": 0.8,
-            "fileType": "image/png",
-            "imageSpriteId": 8562351,
-            "useCollisionPoly": true,
-            "duration": 1,
-            "tag": ""
-          },
-          {
-            "width": 41,
-            "height": 55,
-            "originX": 0.5,
-            "originY": 0.5,
-            "originalSource": "",
-            "exportFormat": "lossless",
-            "exportQuality": 0.8,
-            "fileType": "image/png",
-            "imageSpriteId": 7058101,
-            "useCollisionPoly": true,
-            "duration": 1,
-            "tag": ""
-          },
-          {
-            "width": 72,
-            "height": 102,
-            "originX": 0.5,
-            "originY": 0.5,
-            "originalSource": "",
-            "exportFormat": "lossless",
-            "exportQuality": 0.8,
-            "fileType": "image/png",
-            "imageSpriteId": 5405056,
-            "useCollisionPoly": true,
-            "duration": 1,
-            "tag": ""
-          },
-          {
-            "width": 70,
-            "height": 85,
-            "originX": 0.5,
-            "originY": 0.5,
-            "originalSource": "",
-            "exportFormat": "lossless",
-            "exportQuality": 0.8,
-            "fileType": "image/png",
-            "imageSpriteId": 7872647,
-            "useCollisionPoly": true,
-            "duration": 1,
-            "tag": ""
-          },
-          {
-            "width": 64,
-            "height": 72,
-            "originX": 0.5,
-            "originY": 0.5,
-            "originalSource": "",
-            "exportFormat": "lossless",
-            "exportQuality": 0.8,
-            "fileType": "image/png",
-            "imageSpriteId": 7293258,
-            "useCollisionPoly": true,
-            "duration": 1,
-            "tag": ""
-          },
-          {
-            "width": 71,
-            "height": 63,
-            "originX": 0.5,
-            "originY": 0.5,
-            "originalSource": "",
-            "exportFormat": "lossless",
-            "exportQuality": 0.8,
-            "fileType": "image/png",
-            "imageSpriteId": 5765664,
-            "useCollisionPoly": true,
-            "duration": 1,
-            "tag": ""
-          }
-        ],
-        "sid": 8641977,
-        "name": "Animation 1",
-        "isLooping": false,
-        "isPingPong": false,
-        "repeatCount": 1,
-        "repeatTo": 0,
-        "speed": 0
-      }
-    ],
-    "subfolders": []
-  },
-  "sid": 60525788,
-  "editorNewInstanceIsReplica": true
+	"name": "RoupaDropada",
+	"plugin-id": "Sprite",
+	"sid": 60525788,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 6957968
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 39,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8562351,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 41,
+						"height": 55,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7058101,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 72,
+						"height": 102,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5405056,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 70,
+						"height": 85,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7872647,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7293258,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 71,
+						"height": 63,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5765664,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 8641977,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
 }
