@@ -15,7 +15,7 @@ Contexto técnico de **PorriLand**, jogo 2D em Construct 3 para a game jam **Ove
 - Movimento em grid e conversão de Adeptos por distância.
 - Felicidade, procriação, dúvida e trauma.
 - Fé global e evolução por equilíbrio.
-- Poderes `Raio` e `Sussurro` com botões dinâmicos e cooldown.
+- Poderes `Toque`, `Raio` e `Sussurro` com botões dinâmicos e cooldown; `Bencao` preparado para a Era 2.
 - Menu lateral de objetivos.
 - Dilemas raros que pausam o jogo e oferecem Sim/Não com benefício e custo.
 - Ações de dilema que podem marcar um Adepto para uso de poder.
@@ -56,6 +56,7 @@ Dilema_Alvo_UID
 Dilema_Dono_UID
 Dilema_Tipo
 Dilema_Ativo
+Desastres_Iniciados
 Alcance_Agarrao_Fanatico
 Tempo_Agarrao_Matar
 Fe
@@ -91,8 +92,10 @@ Tempo_Agarrao_Matar = 3
 
 Poderes:
 
-- `Raio` mata ameaças e resolve `Raio_Adepto` no alvo marcado.
-- `Sussurro` converte Céticos e resolve `Sussurro_Adepto` no alvo marcado.
+- `Toque` levanta qualquer Porri e entra em cooldown de 2 segundos ao soltar.
+- `Raio` possui cooldown de 5 segundos, mata ameaças e resolve `Raio_Adepto` no alvo marcado.
+- `Sussurro` possui cooldown de 10 segundos, fortalece Adeptos, converte Céticos/Fanáticos e resolve `Sussurro_Adepto` no alvo marcado.
+- `Bencao` desbloqueia na Era 2, ainda sem efeito de uso.
 - Clicar no poder já selecionado limpa `Poder_Selecionado` e remove `Borda_Poder`.
 
 ## Objetivos E Dilemas

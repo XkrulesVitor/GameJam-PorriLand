@@ -35,13 +35,14 @@ Fechado/funcionando:
 - Fanáticos com perseguição, agarrão e morte por tempo.
 - UI com contadores, estado e barra de Fé.
 - Cursor customizado.
-- Poderes da Era 1: `Raio` e `Sussurro`.
+- Poderes da Era 1: `Toque`, `Raio` e `Sussurro`.
+- Botão de `Bencao` preparado para desbloquear na Era 2, ainda sem funcionalidade.
 - Botões de poder criados automaticamente conforme a Era.
 - Seleção alternável, borda de seleção e cooldown visual.
 - Menu lateral de objetivos.
 - Dilemas raros de oração com pausa total e escolhas Sim/Não.
 - Ações aceitas que podem exigir `Raio` ou `Sussurro` em um alvo marcado.
-- Desastres naturais (ex: Furacão) implementados.
+- Desastres naturais (ex: Furacão) implementados e ativos somente na Era 3.
 
 Ainda planejado:
 - Áudio.
@@ -63,6 +64,7 @@ Dilema_Alvo_UID
 Dilema_Dono_UID
 Dilema_Tipo
 Dilema_Ativo
+Desastres_Iniciados
 Alcance_Agarrao_Fanatico
 Tempo_Agarrao_Matar
 Fe
@@ -190,8 +192,11 @@ Fe = clamp(Fe, 0, 100)
 
 ### Poderes
 
-- `Raio`: mata Céticos/Fanáticos e resolve o dilema `Justica_Vizinho` no alvo marcado.
-- `Sussurro`: converte Céticos e resolve o dilema `Voz_Acalma` no Adepto marcado.
+- `Toque`: única forma de levantar e mover qualquer Porri; entra em cooldown de 2 segundos ao soltar.
+- `Raio`: cooldown de 5 segundos; mata Céticos/Fanáticos e resolve o dilema `Justica_Vizinho` no alvo marcado.
+- `Sussurro`: cooldown de 10 segundos; concede Felicidade e imunidade a Adeptos, converte Céticos/Fanáticos em Adeptos imunes e resolve o dilema `Voz_Acalma` no Adepto marcado.
+- Adeptos imunes piscam até o timer `"Fim_Imune"` terminar.
+- `Bencao`: desbloqueia na Era 2, mas ainda não possui efeito de uso.
 - `Poder_Selecionado` vazio significa nenhum poder selecionado.
 - Clicar novamente no poder selecionado deve desmarcá-lo e destruir `Borda_Poder`.
 - Os botões são criados por dados de animação, ID, Era e cooldown; não colocar botões manualmente no layout.

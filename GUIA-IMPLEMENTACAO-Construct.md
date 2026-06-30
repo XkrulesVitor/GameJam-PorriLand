@@ -119,13 +119,14 @@ No início do layout:
 
 ```text
 Controlador -> iniciar timer "Dilema" por random(90,150)
-Controlador -> iniciar timer "Desastre"
 Controlador -> iniciar timer "Cetico_Aleatorio"
 Ocultar cursor padrão
 Criar 10 Porri_Adepto
 Felicidade inicial = 70
 Iniciar "Andar"
 ```
+
+O timer `"Desastre"` só começa ao entrar na Era 3 e é reagendado enquanto `Era = 3`.
 
 ## 6. Movimento E Conversão
 

@@ -105,8 +105,10 @@ A conversão não usa sobreposição como regra principal.
 
 | Poder | Cooldown | Uso normal | Uso em dilema |
 |---|---:|---|---|
-| Raio | 4s | Mata Céticos e Fanáticos; traumatiza. | Executa o alvo de `Justica_Vizinho`. |
-| Sussurro | 7s | Converte Céticos silenciosamente. | Acalma o alvo de `Voz_Acalma`. |
+| Toque | 2s | Levanta e move qualquer Porri; o cooldown começa ao soltar. | — |
+| Raio | 5s | Mata Céticos e Fanáticos; traumatiza. | Executa o alvo de `Justica_Vizinho`. |
+| Sussurro | 10s | Fortalece Adeptos e converte Céticos/Fanáticos em Adeptos com imunidade visual. | Acalma o alvo de `Voz_Acalma`. |
+| Bencao | 8s | Botão preparado para a Era 2, ainda sem efeito. | — |
 
 Os botões aparecem no canto inferior direito, têm 64×64 e são criados automaticamente conforme `eraDesbloqueio`. Novos botões crescem para a esquerda.
 
@@ -208,13 +210,14 @@ Algumas ideias foram recicladas como dilemas raros, mas a implementação antiga
 - [x] Fanáticos
 - [x] Fé global e estados
 - [x] UI e cursor customizado
-- [x] Raio e Sussurro
+- [x] Toque, Raio e Sussurro
+- [x] Botão de Bencao preparado para a Era 2
 - [x] Botões dinâmicos, seleção e cooldown
 - [x] Menu lateral de objetivos
 - [x] Modal de dilemas com pausa
 - [x] Dilemas com consequências positivas e negativas
 - [x] Alvos marcados para Raio e Sussurro
-- [x] Desastres
+- [x] Desastres naturais ativos somente na Era 3
 - [ ] Áudio
 - [ ] Eras 2–4 completas
 

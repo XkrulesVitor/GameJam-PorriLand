@@ -322,6 +322,16 @@
 			"sid": 998291389101820
 		},
 		{
+			"eventType": "variable",
+			"name": "Desastres_Iniciados",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Impede agendar desastres antes da Era 3 ou iniciar o ciclo mais de uma vez.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 733000000001001
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Setup",
@@ -347,17 +357,6 @@
 								"duration": "random(90,150)",
 								"type": "once",
 								"tag": "\"Dilema\""
-							}
-						},
-						{
-							"id": "start-timer",
-							"objectClass": "Controlador",
-							"sid": 626393768825255,
-							"behaviorType": "Cronômetro",
-							"parameters": {
-								"duration": "random(90,130)",
-								"type": "once",
-								"tag": "\"Desastre\""
 							}
 						},
 						{
@@ -933,7 +932,7 @@
 											"sid": 384979235497726,
 											"parameters": {
 												"instance-variable": "Direcao",
-												"value": "(Porri_Adepto.X < 120 ? \"Direita\" : (Porri_Adepto.X > 1160 ? \"Esquerda\" : (Porri_Adepto.Y < 120 ? \"Baixo\" : (Porri_Adepto.Y > 600 ? \"Cima\" : choose(\"Cima\",\"Baixo\",\"Esquerda\",\"Direita\")))))"
+												"value": "(Porri_Adepto.X < 150 ? \"Direita\" : (Porri_Adepto.X > 1069 ? \"Esquerda\" : (Porri_Adepto.Y < 90 ? \"Baixo\" : (Porri_Adepto.Y > 690 ? \"Cima\" : choose(\"Cima\",\"Baixo\",\"Esquerda\",\"Direita\")))))"
 											}
 										}
 									],
@@ -980,6 +979,331 @@
 						{
 							"eventType": "group",
 							"disabled": false,
+							"title": "Afogamento",
+							"description": "Porris fora da area de terra viram VFX de afogamento e morrem.",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 734000000002002
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 734000000002003,
+											"parameters": {
+												"object": "Porri_Adepto"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002004,
+											"parameters": {
+												"first-value": "((Porri_Adepto.X < 150) ? 1 : ((Porri_Adepto.X > 1069) ? 1 : ((Porri_Adepto.Y < 90) ? 1 : ((Porri_Adepto.Y > 690) ? 1 : 0))))",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002005,
+											"parameters": {
+												"first-value": "Porri_Puxado_UID",
+												"comparison": 1,
+												"second-value": "Porri_Adepto.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 734000000002006,
+											"parameters": {
+												"object-to-create": "Afogamento",
+												"layer": "1",
+												"x": "Porri_Adepto.X",
+												"y": "Porri_Adepto.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Afogamento",
+											"sid": 734000000002007,
+											"parameters": {
+												"animation": "\"Animação 1\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Afogamento",
+											"sid": 734000000002008,
+											"parameters": {
+												"width": "91",
+												"height": "91"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "Afogamento",
+											"sid": 734000000002009,
+											"parameters": {
+												"color": "rgbEx(218, 224, 234)"
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "Afogamento",
+											"sid": 734000000002010
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 734000000002012,
+											"parameters": {
+												"variable": "Mortes",
+												"value": "1"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Porri_Adepto",
+											"sid": 734000000002013
+										}
+									],
+									"sid": 734000000002014
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 734000000002015
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 734000000002016,
+											"parameters": {
+												"object": "Porri_Cetico"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002017,
+											"parameters": {
+												"first-value": "((Porri_Cetico.X < 150) ? 1 : ((Porri_Cetico.X > 1069) ? 1 : ((Porri_Cetico.Y < 90) ? 1 : ((Porri_Cetico.Y > 690) ? 1 : 0))))",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002018,
+											"parameters": {
+												"first-value": "Porri_Puxado_UID",
+												"comparison": 1,
+												"second-value": "Porri_Cetico.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 734000000002019,
+											"parameters": {
+												"object-to-create": "Afogamento",
+												"layer": "1",
+												"x": "Porri_Cetico.X",
+												"y": "Porri_Cetico.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Afogamento",
+											"sid": 734000000002020,
+											"parameters": {
+												"animation": "\"Animação 1\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Afogamento",
+											"sid": 734000000002021,
+											"parameters": {
+												"width": "91",
+												"height": "91"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "Afogamento",
+											"sid": 734000000002022,
+											"parameters": {
+												"color": "rgbEx(159, 156, 156)"
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "Afogamento",
+											"sid": 734000000002023
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 734000000002025,
+											"parameters": {
+												"variable": "Mortes",
+												"value": "1"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Porri_Cetico",
+											"sid": 734000000002026
+										}
+									],
+									"sid": 734000000002027
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 734000000002028
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 734000000002029,
+											"parameters": {
+												"object": "Porri_Fanatico"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002030,
+											"parameters": {
+												"first-value": "((Porri_Fanatico.X < 150) ? 1 : ((Porri_Fanatico.X > 1069) ? 1 : ((Porri_Fanatico.Y < 90) ? 1 : ((Porri_Fanatico.Y > 690) ? 1 : 0))))",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002031,
+											"parameters": {
+												"first-value": "Porri_Puxado_UID",
+												"comparison": 1,
+												"second-value": "Porri_Fanatico.UID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 734000000002032,
+											"parameters": {
+												"object-to-create": "Afogamento",
+												"layer": "1",
+												"x": "Porri_Fanatico.X",
+												"y": "Porri_Fanatico.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Afogamento",
+											"sid": 734000000002033,
+											"parameters": {
+												"animation": "\"Animação 1\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Afogamento",
+											"sid": 734000000002034,
+											"parameters": {
+												"width": "91",
+												"height": "91"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "Afogamento",
+											"sid": 734000000002035,
+											"parameters": {
+												"color": "rgbEx(236, 84, 54)"
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "Afogamento",
+											"sid": 734000000002036
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 734000000002038,
+											"parameters": {
+												"variable": "Mortes",
+												"value": "1"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Porri_Fanatico",
+											"sid": 734000000002039
+										}
+									],
+									"sid": 734000000002040
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-animation-finished",
+											"objectClass": "Afogamento",
+											"sid": 734000000002041
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Afogamento",
+											"sid": 734000000002042
+										}
+									],
+									"sid": 734000000002043
+								}
+							],
+							"sid": 989983290470201
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
 							"title": "Limites do Mapa",
 							"description": "",
 							"isActiveOnStart": true,
@@ -999,6 +1323,16 @@
 											"parameters": {
 												"object": "Porri´s"
 											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 734000000002001,
+											"parameters": {
+												"first-value": "Porri_Puxado_UID",
+												"comparison": 1,
+												"second-value": "Porri´s.UID"
+											}
 										}
 									],
 									"actions": [
@@ -1007,8 +1341,8 @@
 											"objectClass": "Porri´s",
 											"sid": 838312053233108,
 											"parameters": {
-												"x": "clamp(Porri´s.X, 48, 1232)",
-												"y": "clamp(Porri´s.Y, 48, 672)"
+												"x": "clamp(Porri´s.X, 150, 1069)",
+												"y": "clamp(Porri´s.Y, 90, 690)"
 											}
 										}
 									],
@@ -1195,8 +1529,8 @@
 													"objectClass": "Porri´s",
 													"sid": 934828213731924,
 													"parameters": {
-														"x": "clamp(Porri´s.X + cos(Angulo_Separar) * 32, 48, 1232)",
-														"y": "clamp(Porri´s.Y + sin(Angulo_Separar) * 32, 48, 672)"
+														"x": "clamp(Porri´s.X + cos(Angulo_Separar) * 32, 150, 1069)",
+														"y": "clamp(Porri´s.Y + sin(Angulo_Separar) * 32, 90, 690)"
 													}
 												},
 												{
@@ -1265,8 +1599,8 @@
 											"objectClass": "Porri_Adepto",
 											"sid": 612345987101006,
 											"parameters": {
-												"x": "clamp(Porri_Adepto.X + cos(angle(Porri_Cetico.X, Porri_Cetico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 28, 48, 1232)",
-												"y": "clamp(Porri_Adepto.Y + sin(angle(Porri_Cetico.X, Porri_Cetico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 28, 48, 672)"
+												"x": "clamp(Porri_Adepto.X + cos(angle(Porri_Cetico.X, Porri_Cetico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 28, 150, 1069)",
+												"y": "clamp(Porri_Adepto.Y + sin(angle(Porri_Cetico.X, Porri_Cetico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 28, 90, 690)"
 											}
 										},
 										{
@@ -1274,8 +1608,8 @@
 											"objectClass": "Porri_Cetico",
 											"sid": 612345987101007,
 											"parameters": {
-												"x": "clamp(Porri_Cetico.X + cos(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Cetico.X, Porri_Cetico.Y)) * 12, 48, 1232)",
-												"y": "clamp(Porri_Cetico.Y + sin(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Cetico.X, Porri_Cetico.Y)) * 12, 48, 672)"
+												"x": "clamp(Porri_Cetico.X + cos(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Cetico.X, Porri_Cetico.Y)) * 12, 150, 1069)",
+												"y": "clamp(Porri_Cetico.Y + sin(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Cetico.X, Porri_Cetico.Y)) * 12, 90, 690)"
 											}
 										},
 										{
@@ -1353,8 +1687,8 @@
 											"objectClass": "Porri_Adepto",
 											"sid": 612345987101015,
 											"parameters": {
-												"x": "clamp(Porri_Adepto.X + cos(angle(Porri_Fanatico.X, Porri_Fanatico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 30, 48, 1232)",
-												"y": "clamp(Porri_Adepto.Y + sin(angle(Porri_Fanatico.X, Porri_Fanatico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 30, 48, 672)"
+												"x": "clamp(Porri_Adepto.X + cos(angle(Porri_Fanatico.X, Porri_Fanatico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 30, 150, 1069)",
+												"y": "clamp(Porri_Adepto.Y + sin(angle(Porri_Fanatico.X, Porri_Fanatico.Y, Porri_Adepto.X, Porri_Adepto.Y)) * 30, 90, 690)"
 											}
 										},
 										{
@@ -1362,8 +1696,8 @@
 											"objectClass": "Porri_Fanatico",
 											"sid": 612345987101016,
 											"parameters": {
-												"x": "clamp(Porri_Fanatico.X + cos(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Fanatico.X, Porri_Fanatico.Y)) * 8, 48, 1232)",
-												"y": "clamp(Porri_Fanatico.Y + sin(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Fanatico.X, Porri_Fanatico.Y)) * 8, 48, 672)"
+												"x": "clamp(Porri_Fanatico.X + cos(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Fanatico.X, Porri_Fanatico.Y)) * 8, 150, 1069)",
+												"y": "clamp(Porri_Fanatico.Y + sin(angle(Porri_Adepto.X, Porri_Adepto.Y, Porri_Fanatico.X, Porri_Fanatico.Y)) * 8, 90, 690)"
 											}
 										},
 										{
@@ -1604,8 +1938,8 @@
 													"parameters": {
 														"object-to-create": "Porri_Adepto",
 														"layer": "1",
-														"x": "clamp(Porri_Adepto.X + cos(Angulo_Nascimento) * 64, 48, 1232)",
-														"y": "clamp(Porri_Adepto.Y + sin(Angulo_Nascimento) * 64, 48, 672)",
+														"x": "clamp(Porri_Adepto.X + cos(Angulo_Nascimento) * 64, 150, 1069)",
+														"y": "clamp(Porri_Adepto.Y + sin(Angulo_Nascimento) * 64, 90, 690)",
 														"create-hierarchy": false,
 														"template-name": "\"\""
 													}
@@ -3522,7 +3856,7 @@
 									"parameters": {
 										"first-value": "Poder_Selecionado",
 										"comparison": 0,
-										"second-value": "\"\""
+										"second-value": "\"Toque\""
 									}
 								},
 								{
@@ -3543,6 +3877,37 @@
 										"first-value": "Porri_Puxado_UID",
 										"comparison": 0,
 										"second-value": "-1"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 732000000001001,
+									"parameters": {
+										"object": "btn_Poderes",
+										"expression": "btn_Poderes.idPoder",
+										"comparison": 0,
+										"value": "\"Toque\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "btn_Poderes",
+									"sid": 732000000001002,
+									"parameters": {
+										"instance-variable": "cd",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 732000000001003,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 5,
+										"second-value": "btn_Poderes.eraDesbloqueio"
 									}
 								}
 							],
@@ -3722,6 +4087,17 @@
 										"comparison": 0,
 										"value": "Porri_Puxado_UID"
 									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 732000000001004,
+									"parameters": {
+										"object": "btn_Poderes",
+										"expression": "btn_Poderes.idPoder",
+										"comparison": 0,
+										"value": "\"Toque\""
+									}
 								}
 							],
 							"actions": [
@@ -3741,6 +4117,29 @@
 									"parameters": {
 										"visibility": "visible"
 									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "btn_Poderes",
+									"sid": 732000000001005,
+									"parameters": {
+										"instance-variable": "cd",
+										"value": "btn_Poderes.cdMax"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 732000000001006,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 732000000001007
 								},
 								{
 									"id": "set-eventvar-value",
@@ -3798,9 +4197,43 @@
 										"uid": "Porri_Puxado_UID"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 732000000001010,
+									"parameters": {
+										"object": "btn_Poderes",
+										"expression": "btn_Poderes.idPoder",
+										"comparison": 0,
+										"value": "\"Toque\""
+									}
 								}
 							],
 							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "btn_Poderes",
+									"sid": 732000000001011,
+									"parameters": {
+										"instance-variable": "cd",
+										"value": "btn_Poderes.cdMax"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 732000000001012,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 732000000001013
+								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
@@ -3856,7 +4289,7 @@
 									"parameters": {
 										"first-value": "Poder_Selecionado",
 										"comparison": 1,
-										"second-value": "\"\""
+										"second-value": "\"Toque\""
 									}
 								},
 								{
@@ -3973,6 +4406,17 @@
 										"comparison": 0,
 										"value": "Porri_Puxado_UID"
 									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 732000000001014,
+									"parameters": {
+										"object": "btn_Poderes",
+										"expression": "btn_Poderes.idPoder",
+										"comparison": 0,
+										"value": "\"Toque\""
+									}
 								}
 							],
 							"actions": [
@@ -3992,6 +4436,29 @@
 									"parameters": {
 										"visibility": "visible"
 									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "btn_Poderes",
+									"sid": 732000000001015,
+									"parameters": {
+										"instance-variable": "cd",
+										"value": "btn_Poderes.cdMax"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 732000000001016,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 732000000001017
 								},
 								{
 									"id": "set-eventvar-value",
@@ -4758,6 +5225,17 @@
 								"comparison": 5,
 								"second-value": "5"
 							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 734000000001101,
+							"parameters": {
+								"object": "UI",
+								"expression": "UI.UID",
+								"comparison": 0,
+								"value": "61"
+							}
 						}
 					],
 					"actions": [
@@ -4780,11 +5258,12 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
+							"id": "set-animation",
+							"objectClass": "UI",
 							"sid": 276526214094296,
 							"parameters": {
-								"text": "\"Vila\""
+								"animation": "\"Estagio_2\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -5092,6 +5571,17 @@
 								"comparison": 5,
 								"second-value": "10"
 							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 734000000001102,
+							"parameters": {
+								"object": "UI",
+								"expression": "UI.UID",
+								"comparison": 0,
+								"value": "61"
+							}
 						}
 					],
 					"actions": [
@@ -5114,11 +5604,12 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
+							"id": "set-animation",
+							"objectClass": "UI",
 							"sid": 200000000000038,
 							"parameters": {
-								"text": "\"Cidade\""
+								"animation": "\"Estagio_3\"",
+								"from": "beginning"
 							}
 						},
 						{
@@ -5505,14 +5996,6 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
-							"sid": 200000000000077,
-							"parameters": {
-								"text": "\"Metrópole\""
-							}
-						},
-						{
 							"id": "set-opacity",
 							"objectClass": "btn_Evoluir",
 							"sid": 200000000000078,
@@ -5525,7 +6008,6 @@
 					"children": [
 						{
 							"eventType": "block",
-							"sid": 990000000000157,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -5657,11 +6139,11 @@
 										"visibility": "visible"
 									}
 								}
-							]
+							],
+							"sid": 990000000000157
 						},
 						{
 							"eventType": "block",
-							"sid": 990000000000070,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -5709,11 +6191,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 990000000000070
 						},
 						{
 							"eventType": "block",
-							"sid": 990000000000075,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -5761,11 +6243,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 990000000000075
 						},
 						{
 							"eventType": "block",
-							"sid": 990000000000080,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -5833,11 +6315,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 990000000000080
 						},
 						{
 							"eventType": "block",
-							"sid": 990000000000087,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -5905,7 +6387,8 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 990000000000087
 						}
 					]
 				},
@@ -6211,6 +6694,17 @@
 								"comparison": 5,
 								"second-value": "10"
 							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 734000000001103,
+							"parameters": {
+								"object": "UI",
+								"expression": "UI.UID",
+								"comparison": 0,
+								"value": "61"
+							}
 						}
 					],
 					"actions": [
@@ -6233,11 +6727,12 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
+							"id": "set-animation",
+							"objectClass": "UI",
 							"sid": 998291389101507,
 							"parameters": {
-								"text": "\"Cidade\""
+								"animation": "\"Estagio_3\"",
+								"from": "beginning"
 							}
 						},
 						{
@@ -6624,14 +7119,6 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
-							"sid": 998291389101553,
-							"parameters": {
-								"text": "\"Metrópole\""
-							}
-						},
-						{
 							"id": "set-opacity",
 							"objectClass": "btn_Evoluir",
 							"sid": 998291389101554,
@@ -6644,7 +7131,6 @@
 					"children": [
 						{
 							"eventType": "block",
-							"sid": 998291389101556,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -6692,11 +7178,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101556
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101562,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -6744,11 +7230,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101562
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101568,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -6816,11 +7302,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101568
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101576,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -6888,7 +7374,8 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101576
 						}
 					]
 				},
@@ -7194,6 +7681,17 @@
 								"comparison": 5,
 								"second-value": "10"
 							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 734000000001104,
+							"parameters": {
+								"object": "UI",
+								"expression": "UI.UID",
+								"comparison": 0,
+								"value": "61"
+							}
 						}
 					],
 					"actions": [
@@ -7216,11 +7714,12 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
+							"id": "set-animation",
+							"objectClass": "UI",
 							"sid": 998291389101621,
 							"parameters": {
-								"text": "\"Cidade\""
+								"animation": "\"Estagio_3\"",
+								"from": "beginning"
 							}
 						},
 						{
@@ -7607,14 +8106,6 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "sf_Era",
-							"sid": 998291389101667,
-							"parameters": {
-								"text": "\"Metrópole\""
-							}
-						},
-						{
 							"id": "set-opacity",
 							"objectClass": "btn_Evoluir",
 							"sid": 998291389101668,
@@ -7627,7 +8118,6 @@
 					"children": [
 						{
 							"eventType": "block",
-							"sid": 998291389101670,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -7675,11 +8165,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101670
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101676,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -7727,11 +8217,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101676
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101682,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -7799,11 +8289,11 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101682
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101690,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -7871,7 +8361,8 @@
 										"text": "\"\""
 									}
 								}
-							]
+							],
+							"sid": 998291389101690
 						}
 					]
 				}
@@ -8271,7 +8762,7 @@
 					"eventType": "variable",
 					"name": "Poderes_Animacoes",
 					"type": "string",
-					"initialValue": "Relampago|Bencao|Sussurro|Silencio",
+					"initialValue": "Toque|Relampago|Sussurro|Benção",
 					"comment": "Lista de animacoes dos botoes. Adicionar novas na mesma ordem.",
 					"isStatic": false,
 					"isConstant": false,
@@ -8281,7 +8772,7 @@
 					"eventType": "variable",
 					"name": "Poderes_IDs",
 					"type": "string",
-					"initialValue": "Raio|Bencao|Sussurro|Silencio",
+					"initialValue": "Toque|Raio|Sussurro|Bencao",
 					"comment": "Lista de ids usados na logica dos poderes.",
 					"isStatic": false,
 					"isConstant": false,
@@ -8291,7 +8782,7 @@
 					"eventType": "variable",
 					"name": "Poderes_Eras",
 					"type": "string",
-					"initialValue": "1|1|2|3",
+					"initialValue": "1|1|1|2",
 					"comment": "Era minima de cada poder. Ex: 1|1|2|2|2",
 					"isStatic": false,
 					"isConstant": false,
@@ -8301,7 +8792,7 @@
 					"eventType": "variable",
 					"name": "Poderes_Cooldowns",
 					"type": "string",
-					"initialValue": "4|8|7|15",
+					"initialValue": "2|5|10|8",
 					"comment": "Cooldown de cada poder na mesma ordem.",
 					"isStatic": false,
 					"isConstant": false,
@@ -8313,7 +8804,7 @@
 					"type": "number",
 					"initialValue": "0",
 					"comment": "Quantidade de botoes liberados para alinhar da direita para a esquerda.",
-					"isStatic": false,
+					"isStatic": true,
 					"isConstant": false,
 					"sid": 920000000000029
 				},
@@ -8322,8 +8813,8 @@
 					"name": "Poderes_Criados",
 					"type": "number",
 					"initialValue": "0",
-					"comment": "Indice visual dos botoes ja criados.",
-					"isStatic": false,
+					"comment": "Indice visual persistente dos botoes ja criados.",
+					"isStatic": true,
 					"isConstant": false,
 					"sid": 920000000000030
 				},
@@ -8347,6 +8838,30 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "btn_Poderes",
+							"sid": 734000000001001
+						},
+						{
+							"id": "destroy",
+							"objectClass": "cd_overlay",
+							"sid": 734000000001002
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Borda_Poder",
+							"sid": 734000000001003
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 734000000001004,
+							"parameters": {
+								"variable": "Poder_Selecionado",
+								"value": "\"\""
+							}
+						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
@@ -8575,6 +9090,192 @@
 					]
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 732000000002000
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 732000000002001,
+							"parameters": {
+								"first-value": "Poderes_Criados",
+								"comparison": 2,
+								"second-value": "tokencount(Poderes_IDs, \"|\")"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 732000000002002,
+							"parameters": {
+								"first-value": "Era",
+								"comparison": 5,
+								"second-value": "tokenat(Poderes_Eras, Poderes_Criados, \"|\")"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 734000000001005,
+							"parameters": {
+								"first-value": "btn_Poderes.Count",
+								"comparison": 0,
+								"second-value": "Poderes_Criados"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002003,
+							"parameters": {
+								"x": "btn_Poderes.X - 72",
+								"y": "btn_Poderes.Y"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 732000000002004,
+							"parameters": {
+								"object-to-create": "btn_Poderes",
+								"layer": "\"UI\"",
+								"x": "1200",
+								"y": "650",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002005,
+							"parameters": {
+								"width": "64",
+								"height": "64"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002006,
+							"parameters": {
+								"animation": "tokenat(Poderes_Animacoes, Poderes_Criados, \"|\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002007,
+							"parameters": {
+								"instance-variable": "idPoder",
+								"value": "tokenat(Poderes_IDs, Poderes_Criados, \"|\")"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002008,
+							"parameters": {
+								"instance-variable": "eraDesbloqueio",
+								"value": "tokenat(Poderes_Eras, Poderes_Criados, \"|\")"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002009,
+							"parameters": {
+								"instance-variable": "cd",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002010,
+							"parameters": {
+								"instance-variable": "cdMax",
+								"value": "tokenat(Poderes_Cooldowns, Poderes_Criados, \"|\")"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "btn_Poderes",
+							"sid": 732000000002011
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 732000000002012,
+							"parameters": {
+								"object-to-create": "cd_overlay",
+								"layer": "\"UI\"",
+								"x": "btn_Poderes.X",
+								"y": "btn_Poderes.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "cd_overlay",
+							"sid": 732000000002013,
+							"parameters": {
+								"width": "btn_Poderes.Width",
+								"height": "btn_Poderes.Height"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "cd_overlay",
+							"sid": 732000000002014,
+							"parameters": {
+								"instance-variable": "Dono_UID",
+								"value": "btn_Poderes.UID"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "cd_overlay",
+							"sid": 732000000002015,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "cd_overlay",
+							"sid": 732000000002016
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 732000000002017,
+							"parameters": {
+								"variable": "Poderes_QtdLiberados",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 732000000002018,
+							"parameters": {
+								"variable": "Poderes_Criados",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 732000000002019
+				},
+				{
 					"eventType": "group",
 					"disabled": false,
 					"title": "Poderes - Seleção",
@@ -8624,6 +9325,16 @@
 										"first-value": "Era",
 										"comparison": 5,
 										"second-value": "btn_Poderes.eraDesbloqueio"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 732000000001008,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 0,
+										"second-value": "-1"
 									}
 								}
 							],
@@ -8753,6 +9464,16 @@
 										"first-value": "Era",
 										"comparison": 5,
 										"second-value": "btn_Poderes.eraDesbloqueio"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 732000000001009,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 0,
+										"second-value": "-1"
 									}
 								}
 							],
@@ -9262,8 +9983,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "Borda_Poder",
-									"sid": 998291389101701,
-									"parameters": {}
+									"sid": 998291389101701
 								}
 							],
 							"sid": 542131957307785,
@@ -9443,8 +10163,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "Borda_Poder",
-									"sid": 998291389101703,
-									"parameters": {}
+									"sid": 998291389101703
 								}
 							],
 							"sid": 892277657956981,
@@ -9668,11 +10387,188 @@
 								{
 									"id": "destroy",
 									"objectClass": "Borda_Poder",
-									"sid": 998291389101705,
-									"parameters": {}
+									"sid": 998291389101705
 								}
 							],
 							"sid": 541752238109607
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 731000000001020,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Porri_Fanatico"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 731000000001021,
+									"parameters": {
+										"first-value": "Poder_Selecionado",
+										"comparison": 0,
+										"second-value": "\"Sussurro\""
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 731000000001022,
+									"parameters": {
+										"object": "btn_Poderes",
+										"expression": "btn_Poderes.idPoder",
+										"comparison": 0,
+										"value": "Poder_Selecionado"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "btn_Poderes",
+									"sid": 731000000001023,
+									"parameters": {
+										"instance-variable": "cd",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 731000000001024,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 5,
+										"second-value": "btn_Poderes.eraDesbloqueio"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 731000000001025,
+									"parameters": {
+										"object-to-create": "Sussurro",
+										"layer": "1",
+										"x": "Porri_Fanatico.X",
+										"y": "Porri_Fanatico.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Sussurro",
+									"sid": 731000000001026,
+									"parameters": {
+										"width": "80",
+										"height": "80"
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Sussurro",
+									"sid": 731000000001027
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Sussurro",
+									"sid": 731000000001028,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "0.45",
+										"type": "once",
+										"tag": "\"VFX\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 731000000001029,
+									"parameters": {
+										"object-to-create": "Porri_Adepto",
+										"layer": "1",
+										"x": "Porri_Fanatico.X",
+										"y": "Porri_Fanatico.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001030,
+									"parameters": {
+										"instance-variable": "Felicidade",
+										"value": "70"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001031,
+									"parameters": {
+										"instance-variable": "Imune",
+										"value": "1"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001032,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "random(0.5,2.5)",
+										"type": "regular",
+										"tag": "\"Andar\""
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001033,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "4",
+										"type": "once",
+										"tag": "\"Fim_Imune\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Porri_Fanatico",
+									"sid": 731000000001034
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "btn_Poderes",
+									"sid": 731000000001035,
+									"parameters": {
+										"instance-variable": "cd",
+										"value": "btn_Poderes.cdMax"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 731000000001036,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 731000000001037
+								}
+							],
+							"sid": 731000000001038
 						},
 						{
 							"eventType": "block",
@@ -9690,11 +10586,21 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
+									"sid": 731000000001001,
+									"parameters": {
+										"first-value": "Dilema_Acao_Pendente",
+										"comparison": 0,
+										"second-value": "\"\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
 									"sid": 990000000000042,
 									"parameters": {
 										"first-value": "Poder_Selecionado",
 										"comparison": 0,
-										"second-value": "\"Bencao\""
+										"second-value": "\"Sussurro\""
 									}
 								},
 								{
@@ -9731,12 +10637,70 @@
 							],
 							"actions": [
 								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 731000000001002,
+									"parameters": {
+										"object-to-create": "Sussurro",
+										"layer": "1",
+										"x": "Porri_Adepto.X",
+										"y": "Porri_Adepto.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Sussurro",
+									"sid": 731000000001003,
+									"parameters": {
+										"width": "80",
+										"height": "80"
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Sussurro",
+									"sid": 731000000001004
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Sussurro",
+									"sid": 731000000001005,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "0.45",
+										"type": "once",
+										"tag": "\"VFX\""
+									}
+								},
+								{
 									"id": "set-instvar-value",
 									"objectClass": "Porri_Adepto",
 									"sid": 990000000000043,
 									"parameters": {
 										"instance-variable": "Felicidade",
 										"value": "min(100, Porri_Adepto.Felicidade + 25)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001012,
+									"parameters": {
+										"instance-variable": "Imune",
+										"value": "1"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001013,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"duration": "4",
+										"type": "once",
+										"tag": "\"Fim_Imune\""
 									}
 								},
 								{
@@ -9760,8 +10724,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "Borda_Poder",
-									"sid": 998291389101707,
-									"parameters": {}
+									"sid": 998291389101707
 								}
 							],
 							"sid": 990000000000040
@@ -9874,6 +10837,46 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 731000000001006,
+									"parameters": {
+										"interval-seconds": "0.12"
+									}
+								},
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 731000000001007,
+									"parameters": {
+										"object": "Porri_Adepto"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001008,
+									"parameters": {
+										"instance-variable": "Imune"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001009,
+									"parameters": {
+										"opacity": "Porri_Adepto.Opacity = 100 ? 35 : 100"
+									}
+								}
+							],
+							"sid": 731000000001010
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 545432009322397,
@@ -9892,13 +10895,20 @@
 										"instance-variable": "Imune",
 										"value": "0"
 									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Porri_Adepto",
+									"sid": 731000000001011,
+									"parameters": {
+										"opacity": "100"
+									}
 								}
 							],
 							"sid": 870521483944676
 						},
 						{
 							"eventType": "block",
-							"sid": 998291389101712,
 							"conditions": [
 								{
 									"id": "on-object-clicked",
@@ -9988,30 +10998,29 @@
 								{
 									"id": "move-to-top",
 									"objectClass": "Raio",
-									"sid": 998291389101721,
-									"parameters": {}
+									"sid": 998291389101721
 								},
 								{
 									"id": "start-timer",
 									"objectClass": "Raio",
 									"sid": 998291389101722,
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.35",
 										"type": "once",
 										"tag": "\"VFX\""
-									},
-									"behaviorType": "Cronômetro"
+									}
 								},
 								{
 									"id": "start-timer",
 									"objectClass": "Raio",
 									"sid": 998291389101821,
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.001",
 										"type": "once",
 										"tag": "\"ConverteCetico\""
-									},
-									"behaviorType": "Cronômetro"
+									}
 								},
 								{
 									"id": "set-eventvar-value",
@@ -10052,8 +11061,7 @@
 								{
 									"id": "destroy",
 									"objectClass": "Porri_Adepto",
-									"sid": 998291389101728,
-									"parameters": {}
+									"sid": 998291389101728
 								},
 								{
 									"id": "set-instvar-value",
@@ -10076,11 +11084,10 @@
 								{
 									"id": "destroy",
 									"objectClass": "Borda_Poder",
-									"sid": 998291389101731,
-									"parameters": {}
+									"sid": 998291389101731
 								}
 							],
-							"children": []
+							"sid": 998291389101712
 						}
 					],
 					"sid": 952786311894588
@@ -10292,10 +11299,10 @@
 									}
 								}
 							],
+							"sid": 998291389101836,
 							"children": [
 								{
 									"eventType": "block",
-									"sid": 998291389101824,
 									"conditions": [
 										{
 											"id": "pick-by-comparison",
@@ -10310,10 +11317,10 @@
 										}
 									],
 									"actions": [],
+									"sid": 998291389101824,
 									"children": [
 										{
 											"eventType": "block",
-											"sid": 998291389101826,
 											"conditions": [
 												{
 													"id": "for-each",
@@ -10334,13 +11341,13 @@
 														"value": "min(MinFelix_Raio, Porri_Adepto.Felicidade)"
 													}
 												}
-											]
+											],
+											"sid": 998291389101826
 										}
 									]
 								},
 								{
 									"eventType": "block",
-									"sid": 998291389101829,
 									"conditions": [
 										{
 											"id": "pick-by-comparison",
@@ -10401,13 +11408,12 @@
 										{
 											"id": "destroy",
 											"objectClass": "Porri_Adepto",
-											"sid": 998291389101835,
-											"parameters": {}
+											"sid": 998291389101835
 										}
-									]
+									],
+									"sid": 998291389101829
 								}
-							],
-							"sid": 998291389101836
+							]
 						},
 						{
 							"eventType": "block",
@@ -11866,7 +12872,6 @@
 						},
 						{
 							"eventType": "block",
-							"sid": 990000000000172,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -11929,7 +12934,8 @@
 										"visibility": "invisible"
 									}
 								}
-							]
+							],
+							"sid": 990000000000172
 						}
 					]
 				},
@@ -12680,7 +13686,6 @@
 						},
 						{
 							"eventType": "block",
-							"sid": 990000000000180,
 							"conditions": [
 								{
 									"id": "compare-two-values",
@@ -12743,7 +13748,8 @@
 										"visibility": "invisible"
 									}
 								}
-							]
+							],
+							"sid": 990000000000180
 						}
 					]
 				},
@@ -13106,8 +14112,7 @@
 						{
 							"id": "destroy",
 							"objectClass": "Borda_Poder",
-							"sid": 998291389101709,
-							"parameters": {}
+							"sid": 998291389101709
 						}
 					],
 					"sid": 582293603141290
@@ -13317,8 +14322,7 @@
 						{
 							"id": "destroy",
 							"objectClass": "Borda_Poder",
-							"sid": 998291389101711,
-							"parameters": {}
+							"sid": 998291389101711
 						}
 					],
 					"sid": 102227228412925
@@ -13337,12 +14341,75 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 733000000001002
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 733000000001003,
+							"parameters": {
+								"first-value": "Era",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 733000000001004,
+							"parameters": {
+								"first-value": "Desastres_Iniciados",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 733000000001005,
+							"parameters": {
+								"variable": "Desastres_Iniciados",
+								"value": "1"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Controlador",
+							"sid": 733000000001006,
+							"behaviorType": "Cronômetro",
+							"parameters": {
+								"duration": "random(90,130)",
+								"type": "once",
+								"tag": "\"Desastre\""
+							}
+						}
+					],
+					"sid": 733000000001007
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-timer",
 							"objectClass": "Controlador",
 							"sid": 770000000000001,
 							"behaviorType": "Cronômetro",
 							"parameters": {
 								"tag": "\"Desastre\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 733000000001008,
+							"parameters": {
+								"first-value": "Era",
+								"comparison": 0,
+								"second-value": "3"
 							}
 						}
 					],

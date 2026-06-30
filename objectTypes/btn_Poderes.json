@@ -49,6 +49,51 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
+						"imageSpriteId": 2212265,
+						"collisionPoly": {
+							"points": [
+								0.058823529411764705,
+								0.014705882352941164,
+								0.9411764705882353,
+								0.014705882352941164,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.9411764705882353,
+								0.9411764705882353,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.014705882352941176,
+								0.9411764705882353,
+								0.014705882352941176,
+								0.058823529411764705
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 842530403961789,
+				"name": "Toque",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 252384,
 						"collisionPoly": {
 							"points": [
@@ -122,6 +167,51 @@
 				],
 				"sid": 860333100841153,
 				"name": "Sussurro",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6583087,
+						"collisionPoly": {
+							"points": [
+								0.058823529411764705,
+								0.014705882352941176,
+								0.9411764705882353,
+								0.014705882352941176,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.9411764705882353,
+								0.9411764705882353,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.014705882352941176,
+								0.9411764705882353,
+								0.014705882352941176,
+								0.058823529411764705
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 920930481242700,
+				"name": "Benção",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

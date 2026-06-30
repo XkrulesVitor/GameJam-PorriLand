@@ -1,0 +1,62 @@
+{
+	"name": "UI_Mato",
+	"plugin-id": "Sprite",
+	"sid": 201044337167741,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 26,
+						"height": 16,
+						"originX": 0.5769230769230769,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4773141,
+						"collisionPoly": {
+							"points": [
+								0.38461538461538464,
+								0.125,
+								0.7307692307692307,
+								0.125,
+								0.8076923076923077,
+								0.25,
+								0.9230769230769231,
+								0.625,
+								0.9230769230769231,
+								0.8125,
+								0.8461538461538461,
+								0.875,
+								0.15384615384615385,
+								0.875,
+								0.07692307692307693,
+								0.75,
+								0.07692307692307693,
+								0.1875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 289162143802821,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,70 @@
+{
+	"name": "Elemento_Arvore",
+	"plugin-id": "Sprite",
+	"sid": 629526311007092,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 777284359296131
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 56,
+						"height": 89,
+						"originX": 0.5357142857142857,
+						"originY": 0.4438202247191011,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3615265,
+						"collisionPoly": {
+							"points": [
+								0.4910714285714287,
+								0.23782771535580544,
+								0.7738095238095238,
+								0.23970037453183501,
+								0.9285714285714282,
+								0.6067415730337073,
+								0.7857142857142856,
+								0.7921348314606736,
+								0.803571428571428,
+								0.9410112359550561,
+								0.4970238095238094,
+								0.9943820224719101,
+								0.1755952380952383,
+								0.9382022471910112,
+								0.11755952380952385,
+								0.7546816479400749,
+								0.0476190476190476,
+								0.5711610486891385,
+								0.23065476190476206,
+								0.24625468164794007
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 612785681798327,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
