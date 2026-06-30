@@ -43,6 +43,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Tutorial_Pagina",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000001000
+		},
+		{
+			"eventType": "variable",
 			"name": "Dilema_Ativo",
 			"type": "number",
 			"initialValue": "0",
