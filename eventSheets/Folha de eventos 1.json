@@ -6186,6 +6186,14 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btn_Reiniciar",
+									"sid": 999000000001801,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 990000000000070
@@ -6237,6 +6245,14 @@
 									"sid": 990000000000079,
 									"parameters": {
 										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btn_Reiniciar",
+									"sid": 999000000001802,
+									"parameters": {
+										"visibility": "visible"
 									}
 								}
 							],
@@ -6310,6 +6326,14 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btn_Reiniciar",
+									"sid": 999000000001803,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 990000000000080
@@ -6381,6 +6405,14 @@
 									"sid": 990000000000093,
 									"parameters": {
 										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btn_Reiniciar",
+									"sid": 999000000001804,
+									"parameters": {
+										"visibility": "visible"
 									}
 								}
 							],
@@ -12929,6 +12961,14 @@
 									"parameters": {
 										"visibility": "invisible"
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btn_Reiniciar",
+									"sid": 999000000001805,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 990000000000172
@@ -13742,6 +13782,14 @@
 									"sid": 990000000000187,
 									"parameters": {
 										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btn_Reiniciar",
+									"sid": 999000000001806,
+									"parameters": {
+										"visibility": "visible"
 									}
 								}
 							],
@@ -14967,6 +15015,29 @@
 				}
 			],
 			"sid": 999000000001599
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 999000000001700,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "btn_Reiniciar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 999000000001701
+				}
+			],
+			"sid": 999000000001699
 		}
 	],
 	"sid": 577186461650325
