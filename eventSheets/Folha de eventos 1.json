@@ -4035,6 +4035,114 @@
 										}
 									],
 									"sid": 999000000003009
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 374350710008018,
+											"parameters": {
+												"object": "btn_Play"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "UI_Mouse",
+											"sid": 190414343167897,
+											"parameters": {
+												"animation": "\"Mão\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-scale",
+											"objectClass": "btn_Play",
+											"sid": 193260544888906,
+											"parameters": {
+												"scale": "0.23"
+											}
+										}
+									],
+									"sid": 638960505104158
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 702533976178326
+										}
+									],
+									"actions": [
+										{
+											"id": "set-scale",
+											"objectClass": "btn_Play",
+											"sid": 215485333872368,
+											"parameters": {
+												"scale": "0.18"
+											}
+										}
+									],
+									"sid": 818624680453268
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 505441321394883,
+											"parameters": {
+												"object": "btn_Tutorial_Menu"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "UI_Mouse",
+											"sid": 263555381515875,
+											"parameters": {
+												"animation": "\"Mão\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-scale",
+											"objectClass": "btn_Tutorial_Menu",
+											"sid": 157071730224912,
+											"parameters": {
+												"scale": "0.23"
+											}
+										}
+									],
+									"sid": 548319031488693
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 540846281178955
+										}
+									],
+									"actions": [
+										{
+											"id": "set-scale",
+											"objectClass": "btn_Tutorial_Menu",
+											"sid": 895161545934179,
+											"parameters": {
+												"scale": "0.18"
+											}
+										}
+									],
+									"sid": 593836307944421
 								}
 							]
 						},
