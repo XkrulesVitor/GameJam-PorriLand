@@ -345,7 +345,7 @@
               "sid": 626393768825255,
               "behaviorType": "Cronômetro",
               "parameters": {
-                "duration": "random(60,90)",
+                "duration": "random(90,130)",
                 "type": "once",
                 "tag": "\"Desastre\""
               }
@@ -1556,7 +1556,7 @@
                       "parameters": {
                         "instance-variable": "Felicidade",
                         "comparison": 5,
-                        "value": "75"
+                        "value": "70"
                       }
                     },
                     {
@@ -1566,7 +1566,7 @@
                       "parameters": {
                         "first-value": "random(0,1)",
                         "comparison": 2,
-                        "second-value": "0.1"
+                        "second-value": "0.15"
                       }
                     }
                   ],
@@ -2043,7 +2043,7 @@
                   "eventType": "variable",
                   "name": "Cetico_Alcance",
                   "type": "number",
-                  "initialValue": "100",
+                  "initialValue": "80",
                   "comment": "",
                   "isStatic": false,
                   "isConstant": false,
@@ -2053,7 +2053,7 @@
                   "eventType": "variable",
                   "name": "Cetico_Duvida",
                   "type": "number",
-                  "initialValue": "4",
+                  "initialValue": "3",
                   "comment": "",
                   "isStatic": false,
                   "isConstant": false,
@@ -2080,7 +2080,7 @@
                       "sid": 505951687826475,
                       "parameters": {
                         "variable": "Cetico_Alcance",
-                        "value": "120"
+                        "value": "100"
                       }
                     },
                     {
@@ -2089,7 +2089,7 @@
                       "sid": 631432213032781,
                       "parameters": {
                         "variable": "Cetico_Duvida",
-                        "value": "6"
+                        "value": "5"
                       }
                     }
                   ],
@@ -2120,7 +2120,7 @@
                       "sid": 397000818483115,
                       "parameters": {
                         "variable": "Cetico_Duvida",
-                        "value": "4"
+                        "value": "3"
                       }
                     }
                   ],
@@ -2217,7 +2217,7 @@
                   "objectClass": "System",
                   "sid": 829619859188394,
                   "parameters": {
-                    "interval-seconds": "6"
+                    "interval-seconds": "8"
                   }
                 },
                 {
@@ -2237,7 +2237,7 @@
                   "parameters": {
                     "first-value": "random(0,1)",
                     "comparison": 2,
-                    "second-value": "0.35"
+                    "second-value": "0.20"
                   }
                 },
                 {
@@ -2257,7 +2257,7 @@
                   "parameters": {
                     "first-value": "Porri_Fanatico.Count",
                     "comparison": 2,
-                    "second-value": "min(12, ceil(Porri_Adepto.Count / 3))"
+                    "second-value": "min(8, ceil(Porri_Adepto.Count / 4))"
                   }
                 },
                 {
@@ -4357,7 +4357,7 @@
           "eventType": "variable",
           "name": "Meta_Vila",
           "type": "number",
-          "initialValue": "30",
+          "initialValue": "25",
           "comment": "",
           "isStatic": false,
           "isConstant": false,
@@ -4367,7 +4367,7 @@
           "eventType": "variable",
           "name": "Meta_Cidade",
           "type": "number",
-          "initialValue": "70",
+          "initialValue": "60",
           "comment": "",
           "isStatic": false,
           "isConstant": false,
@@ -4377,7 +4377,7 @@
           "eventType": "variable",
           "name": "Meta_Metropole",
           "type": "number",
-          "initialValue": "150",
+          "initialValue": "120",
           "comment": "",
           "isStatic": false,
           "isConstant": false,
@@ -8979,7 +8979,7 @@
               "objectClass": "txt_Objetivos",
               "sid": 713778523291050,
               "parameters": {
-                "text": "\"- - OBJETIVOS - -\" & newline & \"FASE: \" & (Era=1 ? \"TRIBO\" : (Era=2 ? \"VILA\" : \"CIDADE\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 30 ? \"[X] 30 ADEPTOS\" : \"[ ] 30 ADEPTOS\") : (Era=2 ? (Porri_Adepto.Count >= 70 ? \"[X] 70 ADEPTOS\" : \"[ ] 70 ADEPTOS\") : (Porri_Adepto.Count >= 150 ? \"[X] 150 ADEPTOS\" : \"[ ] 150 ADEPTOS\"))) & newline & \"   (Atual: \" & Porri_Adepto.Count & (Era=1 ? \"/30)\" : (Era=2 ? \"/70)\" : \"/150)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FE 50 A 70\" : \"[ ] FE 50 A 70\") : \"[ ] FE 50 A 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FE 40 A 80\" : \"[ ] FE 40 A 80\") : \"[ ] FE 40 A 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FE 45 A 75\" : \"[ ] FE 45 A 75\") : \"[ ] FE 45 A 75\"))) & newline & \"   (Atual: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] MANTER 5 SEG\" : \"[ ] MANTER 5 SEG\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] MANTER 10 SEG\" : \"[ ] MANTER 10 SEG\") : (Tempo_Equilibrio >= 15 ? \"[X] MANTER 15 SEG\" : \"[ ] MANTER 15 SEG\"))) & newline & \"   (Atual: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLUIR <<\" : \">> COMPLETE TUDO <<\")"
+                "text": "\"- - OBJETIVOS - -\" & newline & \"FASE: \" & (Era=1 ? \"TRIBO\" : (Era=2 ? \"VILA\" : \"CIDADE\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 25 ? \"[X] 25 ADEPTOS\" : \"[ ] 25 ADEPTOS\") : (Era=2 ? (Porri_Adepto.Count >= 60 ? \"[X] 60 ADEPTOS\" : \"[ ] 60 ADEPTOS\") : (Porri_Adepto.Count >= 120 ? \"[X] 120 ADEPTOS\" : \"[ ] 120 ADEPTOS\"))) & newline & \"   (Atual: \" & Porri_Adepto.Count & (Era=1 ? \"/25)\" : (Era=2 ? \"/60)\" : \"/120)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FE 50 A 70\" : \"[ ] FE 50 A 70\") : \"[ ] FE 50 A 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FE 40 A 80\" : \"[ ] FE 40 A 80\") : \"[ ] FE 40 A 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FE 45 A 75\" : \"[ ] FE 45 A 75\") : \"[ ] FE 45 A 75\"))) & newline & \"   (Atual: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] MANTER 5 SEG\" : \"[ ] MANTER 5 SEG\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] MANTER 10 SEG\" : \"[ ] MANTER 10 SEG\") : (Tempo_Equilibrio >= 15 ? \"[X] MANTER 15 SEG\" : \"[ ] MANTER 15 SEG\"))) & newline & \"   (Atual: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLUIR <<\" : \">> COMPLETE TUDO <<\")"
               }
             }
           ],
@@ -9000,7 +9000,7 @@
               "objectClass": "txt_Objetivos",
               "sid": 199300351196504,
               "parameters": {
-                "text": "\"- - OBJETIVOS - -\" & newline & \"FASE: \" & (Era=1 ? \"TRIBO\" : (Era=2 ? \"VILA\" : \"CIDADE\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 30 ? \"[X] 30 ADEPTOS\" : \"[ ] 30 ADEPTOS\") : (Era=2 ? (Porri_Adepto.Count >= 70 ? \"[X] 70 ADEPTOS\" : \"[ ] 70 ADEPTOS\") : (Porri_Adepto.Count >= 150 ? \"[X] 150 ADEPTOS\" : \"[ ] 150 ADEPTOS\"))) & newline & \"   (Atual: \" & Porri_Adepto.Count & (Era=1 ? \"/30)\" : (Era=2 ? \"/70)\" : \"/150)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FE 50 A 70\" : \"[ ] FE 50 A 70\") : \"[ ] FE 50 A 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FE 40 A 80\" : \"[ ] FE 40 A 80\") : \"[ ] FE 40 A 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FE 45 A 75\" : \"[ ] FE 45 A 75\") : \"[ ] FE 45 A 75\"))) & newline & \"   (Atual: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] MANTER 5 SEG\" : \"[ ] MANTER 5 SEG\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] MANTER 10 SEG\" : \"[ ] MANTER 10 SEG\") : (Tempo_Equilibrio >= 15 ? \"[X] MANTER 15 SEG\" : \"[ ] MANTER 15 SEG\"))) & newline & \"   (Atual: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLUIR <<\" : \">> COMPLETE TUDO <<\")"
+                "text": "\"- - OBJETIVOS - -\" & newline & \"FASE: \" & (Era=1 ? \"TRIBO\" : (Era=2 ? \"VILA\" : \"CIDADE\")) & newline & newline & (Era=1 ? (Porri_Adepto.Count >= 25 ? \"[X] 25 ADEPTOS\" : \"[ ] 25 ADEPTOS\") : (Era=2 ? (Porri_Adepto.Count >= 60 ? \"[X] 60 ADEPTOS\" : \"[ ] 60 ADEPTOS\") : (Porri_Adepto.Count >= 120 ? \"[X] 120 ADEPTOS\" : \"[ ] 120 ADEPTOS\"))) & newline & \"   (Atual: \" & Porri_Adepto.Count & (Era=1 ? \"/25)\" : (Era=2 ? \"/60)\" : \"/120)\")) & newline & newline & (Era=1 ? (Fe >= 50 ? (Fe <= 70 ? \"[X] FE 50 A 70\" : \"[ ] FE 50 A 70\") : \"[ ] FE 50 A 70\") : (Era=2 ? (Fe >= 40 ? (Fe <= 80 ? \"[X] FE 40 A 80\" : \"[ ] FE 40 A 80\") : \"[ ] FE 40 A 80\") : (Fe >= 45 ? (Fe <= 75 ? \"[X] FE 45 A 75\" : \"[ ] FE 45 A 75\") : \"[ ] FE 45 A 75\"))) & newline & \"   (Atual: \" & round(Fe) & \")\" & newline & newline & (Era=1 ? (Tempo_Equilibrio >= 5 ? \"[X] MANTER 5 SEG\" : \"[ ] MANTER 5 SEG\") : (Era=2 ? (Tempo_Equilibrio >= 10 ? \"[X] MANTER 10 SEG\" : \"[ ] MANTER 10 SEG\") : (Tempo_Equilibrio >= 15 ? \"[X] MANTER 15 SEG\" : \"[ ] MANTER 15 SEG\"))) & newline & \"   (Atual: \" & floor(min((Era=1?5:(Era=2?10:15)), Tempo_Equilibrio)) & \"s)\" & newline & newline & (Tempo_Equilibrio >= (Era=1?5:(Era=2?10:15)) ? \">> EVOLUIR <<\" : \">> COMPLETE TUDO <<\")"
               }
             }
           ],
