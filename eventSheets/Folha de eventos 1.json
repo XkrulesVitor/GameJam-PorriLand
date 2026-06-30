@@ -14849,6 +14849,124 @@
 				}
 			],
 			"sid": 999000000001399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 999000000001500,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "btn_Tutorial_Proximo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 999000000001501,
+					"parameters": {
+						"variable": "Tutorial_Pagina",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "sf_Tutorial_Titulo",
+					"sid": 999000000001502,
+					"parameters": {
+						"text": "\"SEUS PODERES\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "sf_Tutorial_Corpo",
+					"sid": 999000000001503,
+					"parameters": {
+						"text": "\"TOQUE  (2s)   — mova qualquer Porri.\" & newline & newline & \"RAIO   (5s)   — elimina Céticos e Fanáticos.\" & newline & newline & \"SUSSURRO (10s) — converte e fortalece Adeptos.\" & newline & newline & \"DILEMAS surgem a cada ~2 min e pausam o jogo.\" & newline & \"Toda escolha tem um custo. Não há resposta perfeita.\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "btn_Tutorial_Proximo",
+					"sid": 999000000001504,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "btn_Tutorial_Anterior",
+					"sid": 999000000001505,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 999000000001499
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 999000000001600,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "btn_Tutorial_Anterior"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 999000000001601,
+					"parameters": {
+						"variable": "Tutorial_Pagina",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "sf_Tutorial_Titulo",
+					"sid": 999000000001602,
+					"parameters": {
+						"text": "\"O MUNDO\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "sf_Tutorial_Corpo",
+					"sid": 999000000001603,
+					"parameters": {
+						"text": "\"ADEPTOS — fiéis comuns. Geram Fé e se reproduzem quando felizes.\" & newline & newline & \"CÉTICOS — duvidam. Reduzem Fé e afetam Adeptos próximos.\" & newline & newline & \"FANÁTICOS — surgem com Fé alta. Perseguem e matam.\" & newline & newline & \"FÉ:\" & newline & \"0–49   CETICISMO  (Céticos se espalham)\" & newline & \"50–70  EQUILÍBRIO (a civilização só evolui aqui)\" & newline & \"71–100 FANATISMO  (Fanáticos surgem)\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "btn_Tutorial_Proximo",
+					"sid": 999000000001604,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "btn_Tutorial_Anterior",
+					"sid": 999000000001605,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 999000000001599
 		}
 	],
 	"sid": 577186461650325
