@@ -342,6 +342,66 @@
 			"sid": 733000000001001
 		},
 		{
+			"eventType": "variable",
+			"name": "Casas_Liberadas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000020000
+		},
+		{
+			"eventType": "variable",
+			"name": "Casas_Criadas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000020001
+		},
+		{
+			"eventType": "variable",
+			"name": "Casa_Candidata_X",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000020002
+		},
+		{
+			"eventType": "variable",
+			"name": "Casa_Candidata_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000020003
+		},
+		{
+			"eventType": "variable",
+			"name": "Casa_Candidata_Variacao",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000020004
+		},
+		{
+			"eventType": "variable",
+			"name": "Casa_Espaco_Livre",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 999000000020005
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Setup",
@@ -359,35 +419,62 @@
 					],
 					"actions": [
 						{
-							"sid": 999000000001001,
-							"objectClass": "System",
 							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 999000000001001,
 							"parameters": {
 								"time-scale": "0"
 							}
 						},
 						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 999000000020200,
+							"parameters": {
+								"layer": "\"Game\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 999000000020201,
+							"parameters": {
+								"layer": "\"Menu\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 999000000020202,
+							"parameters": {
+								"layer": "\"Tutorial\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-range",
+							"objectClass": "Porri´s",
 							"sid": 505900547021874,
 							"behaviorType": "CampoDeVisão",
-							"objectClass": "Porri´s",
-							"id": "set-range",
 							"parameters": {
 								"range": "200"
 							}
 						},
 						{
+							"id": "set-cone-of-view",
+							"objectClass": "Porri´s",
 							"sid": 721241560619267,
 							"behaviorType": "CampoDeVisão",
-							"objectClass": "Porri´s",
-							"id": "set-cone-of-view",
 							"parameters": {
 								"cone-of-view": "360"
 							}
 						},
 						{
-							"sid": 607500060102074,
-							"objectClass": "Mouse",
 							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 607500060102074,
 							"parameters": {
 								"cursor-style": "none"
 							}
@@ -425,7 +512,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 718656268089171,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(0.5,2.5)",
 										"type": "regular",
@@ -491,7 +578,7 @@
 									"id": "on-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 526486406759496,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"Andar\""
 									}
@@ -517,7 +604,7 @@
 									"id": "on-timer",
 									"objectClass": "Porri_Cetico",
 									"sid": 571265246678100,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"Andar\""
 									}
@@ -743,7 +830,7 @@
 									"conditions": [
 										{
 											"id": "compare-instance-variable",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 491612195597263,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -755,7 +842,7 @@
 									"actions": [
 										{
 											"id": "simulate-control",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 187289201116935,
 											"behaviorType": "MovimentoEmGrid",
 											"parameters": {
@@ -764,7 +851,7 @@
 										},
 										{
 											"id": "set-instvar-value",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 808201097031146,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -779,7 +866,7 @@
 									"conditions": [
 										{
 											"id": "compare-instance-variable",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 100297774416508,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -791,7 +878,7 @@
 									"actions": [
 										{
 											"id": "simulate-control",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 573902478923944,
 											"behaviorType": "MovimentoEmGrid",
 											"parameters": {
@@ -800,7 +887,7 @@
 										},
 										{
 											"id": "set-instvar-value",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 398326557849467,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -815,7 +902,7 @@
 									"conditions": [
 										{
 											"id": "compare-instance-variable",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 368260998719013,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -827,7 +914,7 @@
 									"actions": [
 										{
 											"id": "simulate-control",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 244459176805652,
 											"behaviorType": "MovimentoEmGrid",
 											"parameters": {
@@ -836,7 +923,7 @@
 										},
 										{
 											"id": "set-instvar-value",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 605224078327375,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -851,7 +938,7 @@
 									"conditions": [
 										{
 											"id": "compare-instance-variable",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 966879750598406,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -863,7 +950,7 @@
 									"actions": [
 										{
 											"id": "simulate-control",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 610287061608993,
 											"behaviorType": "MovimentoEmGrid",
 											"parameters": {
@@ -872,7 +959,7 @@
 										},
 										{
 											"id": "set-instvar-value",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 986682975655455,
 											"parameters": {
 												"instance-variable": "Direcao",
@@ -1035,7 +1122,7 @@
 											"objectClass": "Afogamento",
 											"sid": 734000000002007,
 											"parameters": {
-												"animation": "\"AnimaÃ§Ã£o 1\"",
+												"animation": "\"Animação 1\"",
 												"from": "beginning"
 											}
 										},
@@ -1134,7 +1221,7 @@
 											"objectClass": "Afogamento",
 											"sid": 734000000002020,
 											"parameters": {
-												"animation": "\"AnimaÃ§Ã£o 1\"",
+												"animation": "\"Animação 1\"",
 												"from": "beginning"
 											}
 										},
@@ -1233,7 +1320,7 @@
 											"objectClass": "Afogamento",
 											"sid": 734000000002033,
 											"parameters": {
-												"animation": "\"AnimaÃ§Ã£o 1\"",
+												"animation": "\"Animação 1\"",
 												"from": "beginning"
 											}
 										},
@@ -1317,7 +1404,7 @@
 											"objectClass": "System",
 											"sid": 782761113139900,
 											"parameters": {
-												"object": "PorriÂ´s"
+												"object": "Porri´s"
 											}
 										},
 										{
@@ -1327,18 +1414,18 @@
 											"parameters": {
 												"first-value": "Porri_Puxado_UID",
 												"comparison": 1,
-												"second-value": "PorriÂ´s.UID"
+												"second-value": "Porri´s.UID"
 											}
 										}
 									],
 									"actions": [
 										{
 											"id": "set-position",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 838312053233108,
 											"parameters": {
-												"x": "clamp(PorriÂ´s.X, 150, 1069)",
-												"y": "clamp(PorriÂ´s.Y, 90, 690)"
+												"x": "clamp(Porri´s.X, 150, 1069)",
+												"y": "clamp(Porri´s.Y, 90, 690)"
 											}
 										}
 									],
@@ -1352,7 +1439,7 @@
 													"objectClass": "System",
 													"sid": 864325375417668,
 													"parameters": {
-														"first-value": "PorriÂ´s.X",
+														"first-value": "Porri´s.X",
 														"comparison": 2,
 														"second-value": "96"
 													}
@@ -1361,7 +1448,7 @@
 											"actions": [
 												{
 													"id": "set-instvar-value",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 465064455896758,
 													"parameters": {
 														"instance-variable": "Direcao",
@@ -1379,7 +1466,7 @@
 													"objectClass": "System",
 													"sid": 569204537285032,
 													"parameters": {
-														"first-value": "PorriÂ´s.X",
+														"first-value": "Porri´s.X",
 														"comparison": 4,
 														"second-value": "1184"
 													}
@@ -1388,7 +1475,7 @@
 											"actions": [
 												{
 													"id": "set-instvar-value",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 848684139633588,
 													"parameters": {
 														"instance-variable": "Direcao",
@@ -1406,7 +1493,7 @@
 													"objectClass": "System",
 													"sid": 435872793462560,
 													"parameters": {
-														"first-value": "PorriÂ´s.Y",
+														"first-value": "Porri´s.Y",
 														"comparison": 2,
 														"second-value": "96"
 													}
@@ -1415,7 +1502,7 @@
 											"actions": [
 												{
 													"id": "set-instvar-value",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 418118167151069,
 													"parameters": {
 														"instance-variable": "Direcao",
@@ -1433,7 +1520,7 @@
 													"objectClass": "System",
 													"sid": 579193335791124,
 													"parameters": {
-														"first-value": "PorriÂ´s.Y",
+														"first-value": "Porri´s.Y",
 														"comparison": 4,
 														"second-value": "624"
 													}
@@ -1442,7 +1529,7 @@
 											"actions": [
 												{
 													"id": "set-instvar-value",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 645719600918256,
 													"parameters": {
 														"instance-variable": "Direcao",
@@ -1490,15 +1577,15 @@
 											"objectClass": "System",
 											"sid": 684661204068753,
 											"parameters": {
-												"object": "PorriÂ´s"
+												"object": "Porri´s"
 											}
 										},
 										{
 											"id": "is-overlapping-another-object",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 120405507376951,
 											"parameters": {
-												"object": "PorriÂ´s"
+												"object": "Porri´s"
 											}
 										}
 									],
@@ -1522,16 +1609,16 @@
 											"actions": [
 												{
 													"id": "set-position",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 934828213731924,
 													"parameters": {
-														"x": "clamp(PorriÂ´s.X + cos(Angulo_Separar) * 32, 150, 1069)",
-														"y": "clamp(PorriÂ´s.Y + sin(Angulo_Separar) * 32, 90, 690)"
+														"x": "clamp(Porri´s.X + cos(Angulo_Separar) * 32, 150, 1069)",
+														"y": "clamp(Porri´s.Y + sin(Angulo_Separar) * 32, 90, 690)"
 													}
 												},
 												{
 													"id": "set-instvar-value",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 167873059932494,
 													"parameters": {
 														"instance-variable": "Direcao",
@@ -1714,7 +1801,7 @@
 						{
 							"eventType": "group",
 							"disabled": false,
-							"title": "AnimaÃ§Ã£o Procedural",
+							"title": "Animação Procedural",
 							"description": "",
 							"isActiveOnStart": true,
 							"children": [
@@ -1723,27 +1810,27 @@
 									"conditions": [
 										{
 											"id": "on-created",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 920081568161357
 										}
 									],
 									"actions": [
 										{
 											"id": "set-instvar-value",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 463829242815757,
 											"parameters": {
-												"instance-variable": "Altura_PadrÃ£o",
-												"value": "PorriÂ´s.Height"
+												"instance-variable": "Altura_Padrão",
+												"value": "Porri´s.Height"
 											}
 										},
 										{
 											"id": "set-instvar-value",
-											"objectClass": "PorriÂ´s",
+											"objectClass": "Porri´s",
 											"sid": 860152406816810,
 											"parameters": {
-												"instance-variable": "Largura_PadrÃ£o",
-												"value": "PorriÂ´s.Width"
+												"instance-variable": "Largura_Padrão",
+												"value": "Porri´s.Width"
 											}
 										}
 									],
@@ -1762,7 +1849,7 @@
 											"objectClass": "System",
 											"sid": 218197386006329,
 											"parameters": {
-												"object": "PorriÂ´s"
+												"object": "Porri´s"
 											}
 										}
 									],
@@ -1774,7 +1861,7 @@
 											"conditions": [
 												{
 													"id": "is-moving",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 599948821062183,
 													"behaviorType": "MovimentoEmGrid"
 												}
@@ -1782,18 +1869,18 @@
 											"actions": [
 												{
 													"id": "set-height",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 572625443840116,
 													"parameters": {
-														"height": "PorriÂ´s.Altura_PadrÃ£o - sin(time * 720 + PorriÂ´s.UID * 25) * 6"
+														"height": "Porri´s.Altura_Padrão - sin(time * 720 + Porri´s.UID * 25) * 6"
 													}
 												},
 												{
 													"id": "set-width",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 969020714041640,
 													"parameters": {
-														"width": "PorriÂ´s.Largura_PadrÃ£o + sin(time * 720 + PorriÂ´s.UID * 25) * 6"
+														"width": "Porri´s.Largura_Padrão + sin(time * 720 + Porri´s.UID * 25) * 6"
 													}
 												}
 											],
@@ -1811,18 +1898,18 @@
 											"actions": [
 												{
 													"id": "set-height",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 378158714296659,
 													"parameters": {
-														"height": "PorriÂ´s.Altura_PadrÃ£o"
+														"height": "Porri´s.Altura_Padrão"
 													}
 												},
 												{
 													"id": "set-width",
-													"objectClass": "PorriÂ´s",
+													"objectClass": "Porri´s",
 													"sid": 221429682287495,
 													"parameters": {
-														"width": "PorriÂ´s.Largura_PadrÃ£o"
+														"width": "Porri´s.Largura_Padrão"
 													}
 												}
 											],
@@ -1868,7 +1955,7 @@
 											"objectClass": "System",
 											"sid": 788529536317820,
 											"parameters": {
-												"first-value": "PorriÂ´s.Count",
+												"first-value": "Porri´s.Count",
 												"comparison": 2,
 												"second-value": "MaxPorris"
 											}
@@ -1953,7 +2040,7 @@
 													"id": "start-timer",
 													"objectClass": "Porri_Adepto",
 													"sid": 492309997902685,
-													"behaviorType": "CronÃ´metro",
+													"behaviorType": "Cronômetro",
 													"parameters": {
 														"duration": "random(0.5,2.5)",
 														"type": "regular",
@@ -2091,7 +2178,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Cetico",
 									"sid": 731526224863721,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(0.5,2.5)",
 										"type": "regular",
@@ -2130,7 +2217,7 @@
 											"id": "on-timer",
 											"objectClass": "Controlador",
 											"sid": 820656635247527,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"tag": "\"Cetico_Aleatorio\""
 											}
@@ -2172,7 +2259,7 @@
 											"id": "start-timer",
 											"objectClass": "Porri_Cetico",
 											"sid": 357786898847520,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"duration": "random(0.5,2.5)",
 												"type": "regular",
@@ -2206,7 +2293,7 @@
 													"id": "start-timer",
 													"objectClass": "Controlador",
 													"sid": 997183903913612,
-													"behaviorType": "CronÃ´metro",
+													"behaviorType": "Cronômetro",
 													"parameters": {
 														"duration": "20",
 														"type": "once",
@@ -2235,7 +2322,7 @@
 											"id": "is-timer-paused",
 											"objectClass": "Controlador",
 											"sid": 610511992005793,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"tag": "\"Cetico_Aleatorio\""
 											}
@@ -2246,7 +2333,7 @@
 											"id": "start-timer",
 											"objectClass": "Controlador",
 											"sid": 921782549650353,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"duration": "20",
 												"type": "once",
@@ -2354,7 +2441,7 @@
 											"id": "start-timer",
 											"objectClass": "Porri_Cetico",
 											"sid": 579069358339886,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"duration": "random(0.5,2.5)",
 												"type": "regular",
@@ -3641,7 +3728,17 @@
 											"objectClass": "Mouse",
 											"sid": 830604342538439,
 											"parameters": {
-												"object": "PorriÂ´s"
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 830604342538440,
+											"parameters": {
+												"first-value": "timescale",
+												"comparison": 4,
+												"second-value": "0"
 											}
 										}
 									],
@@ -3651,7 +3748,7 @@
 											"objectClass": "UI_Mouse",
 											"sid": 563694855208959,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
@@ -3698,7 +3795,7 @@
 											"objectClass": "UI_Mouse",
 											"sid": 920000000000072,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
@@ -3723,7 +3820,7 @@
 											"objectClass": "UI_Mouse",
 											"sid": 920000000000106,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
@@ -3748,7 +3845,7 @@
 											"objectClass": "UI_Mouse",
 											"sid": 920000000000075,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
@@ -3773,7 +3870,7 @@
 											"objectClass": "UI_Mouse",
 											"sid": 920000000000078,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
@@ -3798,7 +3895,7 @@
 											"objectClass": "UI_Mouse",
 											"sid": 920000000000087,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
@@ -3823,12 +3920,87 @@
 											"objectClass": "UI_Mouse",
 											"sid": 920000000000090,
 											"parameters": {
-												"animation": "\"MÃ£o\"",
+												"animation": "\"Mão\"",
 												"from": "beginning"
 											}
 										}
 									],
 									"sid": 920000000000091
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 999000000003001,
+											"parameters": {
+												"object": "btn_Tutorial_Back"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "UI_Mouse",
+											"sid": 999000000003002,
+											"parameters": {
+												"animation": "\"Mão\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 999000000003003
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 999000000003004,
+											"parameters": {
+												"object": "btn_Tutorial_Proximo"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "UI_Mouse",
+											"sid": 999000000003005,
+											"parameters": {
+												"animation": "\"Mão\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 999000000003006
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 999000000003007,
+											"parameters": {
+												"object": "btn_Tutorial_Anterior"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "UI_Mouse",
+											"sid": 999000000003008,
+											"parameters": {
+												"animation": "\"Mão\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 999000000003009
 								}
 							]
 						},
@@ -3842,7 +4014,7 @@
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
-										"object-clicked": "PorriÂ´s"
+										"object-clicked": "Porri´s"
 									}
 								},
 								{
@@ -3914,7 +4086,7 @@
 									"sid": 930000000000012,
 									"parameters": {
 										"variable": "Porri_Puxado_UID",
-										"value": "PorriÂ´s.UID"
+										"value": "Porri´s.UID"
 									}
 								},
 								{
@@ -3923,7 +4095,7 @@
 									"sid": 930000000000013,
 									"parameters": {
 										"variable": "Porri_Puxado_Offset_X",
-										"value": "PorriÂ´s.X - Mouse.X(\"Game\")"
+										"value": "Porri´s.X - Mouse.X(\"Game\")"
 									}
 								},
 								{
@@ -3932,12 +4104,12 @@
 									"sid": 930000000000014,
 									"parameters": {
 										"variable": "Porri_Puxado_Offset_Y",
-										"value": "PorriÂ´s.Y - Mouse.Y(\"Game\")"
+										"value": "Porri´s.Y - Mouse.Y(\"Game\")"
 									}
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000015,
 									"parameters": {
 										"instance-variable": "Direcao",
@@ -3946,7 +4118,7 @@
 								},
 								{
 									"id": "move-to-top",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000016
 								}
 							],
@@ -3983,8 +4155,8 @@
 									"objectClass": "System",
 									"sid": 930000000000020,
 									"parameters": {
-										"object": "PorriÂ´s",
-										"expression": "PorriÂ´s.UID",
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
 										"comparison": 0,
 										"value": "Porri_Puxado_UID"
 									}
@@ -3993,7 +4165,7 @@
 							"actions": [
 								{
 									"id": "set-position",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000021,
 									"parameters": {
 										"x": "clamp(Mouse.X(\"Game\") + Porri_Puxado_Offset_X, 48, 1232)",
@@ -4002,7 +4174,7 @@
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000022,
 									"parameters": {
 										"instance-variable": "Direcao",
@@ -4011,7 +4183,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000023,
 									"parameters": {
 										"visibility": "invisible"
@@ -4078,8 +4250,8 @@
 									"objectClass": "System",
 									"sid": 930000000000029,
 									"parameters": {
-										"object": "PorriÂ´s",
-										"expression": "PorriÂ´s.UID",
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
 										"comparison": 0,
 										"value": "Porri_Puxado_UID"
 									}
@@ -4099,7 +4271,7 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000030,
 									"parameters": {
 										"instance-variable": "Direcao",
@@ -4108,7 +4280,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000104,
 									"parameters": {
 										"visibility": "visible"
@@ -4301,8 +4473,8 @@
 									"objectClass": "System",
 									"sid": 930000000000044,
 									"parameters": {
-										"object": "PorriÂ´s",
-										"expression": "PorriÂ´s.UID",
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
 										"comparison": 0,
 										"value": "Porri_Puxado_UID"
 									}
@@ -4311,7 +4483,7 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000045,
 									"parameters": {
 										"instance-variable": "Direcao",
@@ -4320,7 +4492,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000105,
 									"parameters": {
 										"visibility": "visible"
@@ -4397,8 +4569,8 @@
 									"objectClass": "System",
 									"sid": 930000000000053,
 									"parameters": {
-										"object": "PorriÂ´s",
-										"expression": "PorriÂ´s.UID",
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
 										"comparison": 0,
 										"value": "Porri_Puxado_UID"
 									}
@@ -4418,7 +4590,7 @@
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000054,
 									"parameters": {
 										"instance-variable": "Direcao",
@@ -4427,7 +4599,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "PorriÂ´s",
+									"objectClass": "Porri´s",
 									"sid": 930000000000106,
 									"parameters": {
 										"visibility": "visible"
@@ -6194,6 +6366,23 @@
 									"parameters": {
 										"visibility": "visible"
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003001,
+									"parameters": {
+										"animation": "\"Deus Vivo\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003002,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 990000000000070
@@ -6251,6 +6440,23 @@
 									"id": "set-visible",
 									"objectClass": "btn_Reiniciar",
 									"sid": 999000000001802,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003003,
+									"parameters": {
+										"animation": "\"Partida\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003004,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -6334,6 +6540,23 @@
 									"parameters": {
 										"visibility": "visible"
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003005,
+									"parameters": {
+										"animation": "\"Senhor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003006,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 990000000000080
@@ -6411,6 +6634,23 @@
 									"id": "set-visible",
 									"objectClass": "btn_Reiniciar",
 									"sid": 999000000001804,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003007,
+									"parameters": {
+										"animation": "\"Pastor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003008,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -7205,6 +7445,23 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003009,
+									"parameters": {
+										"animation": "\"Deus Vivo\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003010,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 998291389101556
@@ -7256,6 +7513,23 @@
 									"sid": 998291389101567,
 									"parameters": {
 										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003011,
+									"parameters": {
+										"animation": "\"Partida\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003012,
+									"parameters": {
+										"visibility": "visible"
 									}
 								}
 							],
@@ -7329,6 +7603,23 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003013,
+									"parameters": {
+										"animation": "\"Senhor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003014,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 998291389101568
@@ -7400,6 +7691,23 @@
 									"sid": 998291389101583,
 									"parameters": {
 										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003015,
+									"parameters": {
+										"animation": "\"Pastor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003016,
+									"parameters": {
+										"visibility": "visible"
 									}
 								}
 							],
@@ -8192,6 +8500,23 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003017,
+									"parameters": {
+										"animation": "\"Deus Vivo\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003018,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 998291389101670
@@ -8243,6 +8568,23 @@
 									"sid": 998291389101681,
 									"parameters": {
 										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003019,
+									"parameters": {
+										"animation": "\"Partida\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003020,
+									"parameters": {
+										"visibility": "visible"
 									}
 								}
 							],
@@ -8316,6 +8658,23 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003021,
+									"parameters": {
+										"animation": "\"Senhor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003022,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 998291389101682
@@ -8388,6 +8747,23 @@
 									"parameters": {
 										"text": "\"\""
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003023,
+									"parameters": {
+										"animation": "\"Pastor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003024,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 998291389101690
@@ -8396,6 +8772,1491 @@
 				}
 			],
 			"sid": 721794732464386
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Casas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 999000000020006,
+							"parameters": {
+								"interval-seconds": "0.25"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 999000000020007,
+							"parameters": {
+								"variable": "Casas_Liberadas",
+								"value": "max(Casas_Liberadas, Porri_Adepto.Count >= 120 ? 4 : (Porri_Adepto.Count >= 60 ? 3 : (Porri_Adepto.Count >= 25 ? 2 : (Porri_Adepto.Count >= 10 ? 1 : 0))))"
+							}
+						}
+					],
+					"sid": 999000000020008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 999000000020009,
+							"parameters": {
+								"interval-seconds": "0.5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 999000000020010,
+							"parameters": {
+								"first-value": "Casas_Criadas",
+								"comparison": 2,
+								"second-value": "Casas_Liberadas"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 999000000020137,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020011,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020012,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020013,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020014,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020015,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020016,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020017,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020028,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020018,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020019,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020020,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020021,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020022
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020023,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020024,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020025,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020026,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020027
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020029,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020030,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020031,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020032,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020033,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020034,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020035,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020046,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020036,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020037,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020038,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020039,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020040
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020041,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020042,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020043,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020044,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020045
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020047,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020048,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020049,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020050,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020051,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020052,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020053,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020064,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020054,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020055,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020056,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020057,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020058
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020059,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020060,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020061,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020062,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020063
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020065,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020066,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020067,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020068,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020069,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020070,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020071,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020082,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020072,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020073,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020074,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020075,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020076
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020077,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020078,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020079,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020080,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020081
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020083,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020084,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "5"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020085,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020086,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020087,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020088,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020089,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020100,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020090,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020091,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020092,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020093,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020094
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020095,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020096,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020097,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020098,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020099
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020101,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020102,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020103,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020104,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020105,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020106,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020107,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020118,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020108,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020109,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020110,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020111,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020112
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020113,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020114,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020115,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020116,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020117
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020119,
+									"parameters": {
+										"first-value": "Casas_Criadas",
+										"comparison": 2,
+										"second-value": "Casas_Liberadas"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 999000000020120,
+									"parameters": {
+										"object": "Elemento_Casa",
+										"expression": "Elemento_Casa.Indice_Casa",
+										"comparison": 0,
+										"value": "7"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020121,
+									"parameters": {
+										"first-value": "Elemento_Casa.X",
+										"comparison": 2,
+										"second-value": "-1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020122,
+									"parameters": {
+										"variable": "Casa_Candidata_X",
+										"value": "Elemento_Casa.Casa_X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020123,
+									"parameters": {
+										"variable": "Casa_Candidata_Y",
+										"value": "Elemento_Casa.Casa_Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020124,
+									"parameters": {
+										"variable": "Casa_Candidata_Variacao",
+										"value": "Elemento_Casa.Variacao_Casa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 999000000020125,
+									"parameters": {
+										"variable": "Casa_Espaco_Livre",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 999000000020136,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 999000000020126,
+											"parameters": {
+												"object": "Porri´s"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020127,
+											"parameters": {
+												"first-value": "abs(Porri´s.X - Casa_Candidata_X)",
+												"comparison": 2,
+												"second-value": "90"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020128,
+											"parameters": {
+												"first-value": "abs(Porri´s.Y - Casa_Candidata_Y)",
+												"comparison": 2,
+												"second-value": "80"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 999000000020129,
+											"parameters": {
+												"variable": "Casa_Espaco_Livre",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 999000000020130
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 999000000020131,
+											"parameters": {
+												"first-value": "Casa_Espaco_Livre",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020132,
+											"parameters": {
+												"x": "Casa_Candidata_X",
+												"y": "Casa_Candidata_Y"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Elemento_Casa",
+											"sid": 999000000020133,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 999000000020134,
+											"parameters": {
+												"variable": "Casas_Criadas",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 999000000020135
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 999000000020138,
+							"parameters": {
+								"interval-seconds": "0.25"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 999000000020139,
+							"parameters": {
+								"object": "Elemento_Casa"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 999000000020140,
+							"parameters": {
+								"first-value": "Elemento_Casa.X",
+								"comparison": 4,
+								"second-value": "-1000"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 999000000020159,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020141,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020142,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020143,
+									"parameters": {
+										"width": "108",
+										"height": "131"
+									}
+								}
+							],
+							"sid": 999000000020144
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020145,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020146,
+									"parameters": {
+										"first-value": "Elemento_Casa.Variacao_Casa",
+										"comparison": 0,
+										"second-value": "\"A\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020147,
+									"parameters": {
+										"animation": "\"Era2_A\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020148,
+									"parameters": {
+										"width": "142",
+										"height": "106"
+									}
+								}
+							],
+							"sid": 999000000020149
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020150,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020151,
+									"parameters": {
+										"first-value": "Elemento_Casa.Variacao_Casa",
+										"comparison": 0,
+										"second-value": "\"B\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020152,
+									"parameters": {
+										"animation": "\"Era2_B\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020153,
+									"parameters": {
+										"width": "130",
+										"height": "123"
+									}
+								}
+							],
+							"sid": 999000000020154
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 999000000020155,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020156,
+									"parameters": {
+										"animation": "\"Animation 3\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Elemento_Casa",
+									"sid": 999000000020157,
+									"parameters": {
+										"width": "124",
+										"height": "135"
+									}
+								}
+							],
+							"sid": 999000000020158
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 999000000020160
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 999000000020161,
+							"parameters": {
+								"first-value": "Era",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Elemento_Chao_Cidade",
+							"sid": 999000000020162,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 999000000020163
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 999000000020164
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 999000000020165,
+							"parameters": {
+								"first-value": "Era",
+								"comparison": 1,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Elemento_Chao_Cidade",
+							"sid": 999000000020166,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 999000000020167
+				}
+			],
+			"sid": 999000000020168
 		},
 		{
 			"eventType": "group",
@@ -9969,7 +11830,7 @@
 									"id": "start-timer",
 									"objectClass": "Raio",
 									"sid": 301364743295856,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.35",
 										"type": "once",
@@ -10172,7 +12033,7 @@
 									"id": "start-timer",
 									"objectClass": "Raio",
 									"sid": 886241884626595,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.35",
 										"type": "once",
@@ -10329,7 +12190,7 @@
 									"id": "start-timer",
 									"objectClass": "Sussurro",
 									"sid": 735756435583525,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.45",
 										"type": "once",
@@ -10371,7 +12232,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 133965663079570,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(0.5,2.5)",
 										"type": "regular",
@@ -10382,7 +12243,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 481598681195626,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "4",
 										"type": "once",
@@ -10507,7 +12368,7 @@
 									"id": "start-timer",
 									"objectClass": "Sussurro",
 									"sid": 731000000001028,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.45",
 										"type": "once",
@@ -10549,7 +12410,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 731000000001032,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(0.5,2.5)",
 										"type": "regular",
@@ -10560,7 +12421,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 731000000001033,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "4",
 										"type": "once",
@@ -10695,7 +12556,7 @@
 									"id": "start-timer",
 									"objectClass": "Sussurro",
 									"sid": 731000000001005,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.45",
 										"type": "once",
@@ -10724,7 +12585,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 731000000001013,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "4",
 										"type": "once",
@@ -10833,7 +12694,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 990000000000058,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "3",
 										"type": "once",
@@ -10908,7 +12769,7 @@
 									"id": "on-timer",
 									"objectClass": "Porri_Adepto",
 									"sid": 545432009322397,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"Fim_Imune\""
 									}
@@ -11032,7 +12893,7 @@
 									"id": "start-timer",
 									"objectClass": "Raio",
 									"sid": 998291389101722,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.35",
 										"type": "once",
@@ -11043,7 +12904,7 @@
 									"id": "start-timer",
 									"objectClass": "Raio",
 									"sid": 998291389101821,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "0.001",
 										"type": "once",
@@ -11288,7 +13149,7 @@
 									"id": "on-timer",
 									"objectClass": "Raio",
 									"sid": 360972485415689,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"VFX\""
 									}
@@ -11310,7 +13171,7 @@
 									"id": "on-timer",
 									"objectClass": "Raio",
 									"sid": 998291389101822,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"ConverteCetico\""
 									}
@@ -11426,7 +13287,7 @@
 											"id": "start-timer",
 											"objectClass": "Porri_Cetico",
 											"sid": 998291389101834,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"duration": "random(0.5,2.5)",
 												"type": "regular",
@@ -11450,7 +13311,7 @@
 									"id": "on-timer",
 									"objectClass": "Sussurro",
 									"sid": 974669080551586,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"tag": "\"VFX\""
 									}
@@ -11658,7 +13519,7 @@
 							"id": "on-timer",
 							"objectClass": "Controlador",
 							"sid": 140093898520709,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"tag": "\"Dilema\""
 							}
@@ -12447,7 +14308,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 349396282002666,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -12514,7 +14375,7 @@
 											"id": "start-timer",
 											"objectClass": "Porri_Cetico",
 											"sid": 448610719580220,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"duration": "random(0.5,2.5)",
 												"type": "regular",
@@ -12737,7 +14598,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Cetico",
 									"sid": 990000000000116,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(0.5,2.5)",
 										"type": "regular",
@@ -12780,7 +14641,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 990000000000121,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -12888,7 +14749,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 990000000000144,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -12966,6 +14827,23 @@
 									"id": "set-visible",
 									"objectClass": "btn_Reiniciar",
 									"sid": 999000000001805,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003025,
+									"parameters": {
+										"animation": "\"Encarnacao\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003026,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -13212,7 +15090,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 339586075949073,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -13271,7 +15149,7 @@
 											"id": "start-timer",
 											"objectClass": "Porri_Fanatico",
 											"sid": 510820394610529,
-											"behaviorType": "CronÃ´metro",
+											"behaviorType": "Cronômetro",
 											"parameters": {
 												"duration": "random(0.5,2.5)",
 												"type": "regular",
@@ -13331,7 +15209,7 @@
 									"id": "start-timer",
 									"objectClass": "Porri_Cetico",
 									"sid": 761662219730586,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(0.5,2.5)",
 										"type": "regular",
@@ -13383,7 +15261,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 340010139766019,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -13486,7 +15364,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 630568163103675,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -13598,7 +15476,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 990000000000127,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -13710,7 +15588,7 @@
 									"id": "start-timer",
 									"objectClass": "Controlador",
 									"sid": 990000000000156,
-									"behaviorType": "CronÃ´metro",
+									"behaviorType": "Cronômetro",
 									"parameters": {
 										"duration": "random(90,150)",
 										"type": "once",
@@ -13788,6 +15666,23 @@
 									"id": "set-visible",
 									"objectClass": "btn_Reiniciar",
 									"sid": 999000000001806,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003027,
+									"parameters": {
+										"animation": "\"Pastor\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Imagem_Final",
+									"sid": 888000000003028,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -13927,7 +15822,7 @@
 							"id": "start-timer",
 							"objectClass": "Controlador",
 							"sid": 529710415911825,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "random(90,150)",
 								"type": "once",
@@ -14044,7 +15939,7 @@
 							"id": "start-timer",
 							"objectClass": "Raio",
 							"sid": 385563489478783,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "0.35",
 								"type": "once",
@@ -14128,7 +16023,7 @@
 							"id": "start-timer",
 							"objectClass": "Controlador",
 							"sid": 410256233510406,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "random(90,150)",
 								"type": "once",
@@ -14268,7 +16163,7 @@
 							"id": "start-timer",
 							"objectClass": "Sussurro",
 							"sid": 958115423969808,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "0.45",
 								"type": "once",
@@ -14347,7 +16242,7 @@
 							"id": "start-timer",
 							"objectClass": "Controlador",
 							"sid": 998291389101467,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "random(90,150)",
 								"type": "once",
@@ -14424,7 +16319,7 @@
 							"id": "start-timer",
 							"objectClass": "Controlador",
 							"sid": 733000000001006,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "random(90,130)",
 								"type": "once",
@@ -14441,7 +16336,7 @@
 							"id": "on-timer",
 							"objectClass": "Controlador",
 							"sid": 770000000000001,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"tag": "\"Desastre\""
 							}
@@ -14475,7 +16370,7 @@
 							"id": "start-timer",
 							"objectClass": "Controlador",
 							"sid": 770000000000003,
-							"behaviorType": "CronÃ´metro",
+							"behaviorType": "Cronômetro",
 							"parameters": {
 								"duration": "random(90,150)",
 								"type": "once",
@@ -14675,17 +16570,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sf_Menu_Botao"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "sf_Menu_Botao",
-					"sid": 999000000001101,
-					"parameters": {
-						"instance-variable": "Contexto",
-						"comparison": 0,
-						"value": "\"Jogar\""
+						"object-clicked": "btn_Play"
 					}
 				}
 			],
@@ -14701,10 +16586,46 @@
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 999000000001103,
+					"sid": 735945423067769,
 					"parameters": {
 						"layer": "\"Menu\"",
-						"visible": "false"
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 622512723537876,
+					"parameters": {
+						"layer": "\"Menu\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 817253587662189,
+					"parameters": {
+						"layer": "\"Tutorial\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 334101980359530,
+					"parameters": {
+						"layer": "\"Tutorial\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 999000000020206,
+					"parameters": {
+						"layer": "\"Game\"",
+						"interactive": true
 					}
 				},
 				{
@@ -14742,17 +16663,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sf_Menu_Botao"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "sf_Menu_Botao",
-					"sid": 999000000001201,
-					"parameters": {
-						"instance-variable": "Contexto",
-						"comparison": 0,
-						"value": "\"Tutorial\""
+						"object-clicked": "btn_Tutorial_Menu"
 					}
 				}
 			],
@@ -14763,7 +16674,16 @@
 					"sid": 999000000001202,
 					"parameters": {
 						"layer": "\"Menu\"",
-						"visible": "false"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 999000000020207,
+					"parameters": {
+						"layer": "\"Menu\"",
+						"interactive": true
 					}
 				},
 				{
@@ -14772,7 +16692,25 @@
 					"sid": 999000000001203,
 					"parameters": {
 						"layer": "\"Tutorial\"",
-						"visible": "true"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 999000000020208,
+					"parameters": {
+						"layer": "\"Tutorial\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 999000000020209,
+					"parameters": {
+						"layer": "\"Game\"",
+						"interactive": true
 					}
 				},
 				{
@@ -14789,7 +16727,7 @@
 					"objectClass": "sf_Tutorial_Titulo",
 					"sid": 999000000001205,
 					"parameters": {
-						"text": "\"O MUNDO\""
+						"text": "\"THE WORLD\""
 					}
 				},
 				{
@@ -14797,7 +16735,7 @@
 					"objectClass": "sf_Tutorial_Corpo",
 					"sid": 999000000001206,
 					"parameters": {
-						"text": "\"ADEPTOS — fiéis comuns. Geram Fé e se reproduzem quando felizes.\" & newline & newline & \"CÉTICOS — duvidam. Reduzem Fé e afetam Adeptos próximos.\" & newline & newline & \"FANÁTICOS — surgem com Fé alta. Perseguem e matam.\" & newline & newline & \"FÉ:\" & newline & \"0–49   CETICISMO  (Céticos se espalham)\" & newline & \"50–70  EQUILÍBRIO (a civilização só evolui aqui)\" & newline & \"71–100 FANATISMO  (Fanáticos surgem)\""
+						"text": "\"FOLLOWERS - COMMON BELIEVERS. THEY GENERATE FAITH AND REPRODUCE WHEN HAPPY.\" & newline & newline & \"SKEPTICS - THEY DOUBT. THEY LOWER FAITH AND INFLUENCE NEARBY FOLLOWERS.\" & newline & newline & \"FANATICS - THEY APPEAR WHEN FAITH IS HIGH. THEY CHASE AND KILL.\" & newline & newline & \"FAITH:\" & newline & \"0-49    SKEPTICISM  (SKEPTICS SPREAD)\" & newline & \"50-70   BALANCE     (EVOLUTION ONLY HERE)\" & newline & \"71-100  FANATICISM  (FANATICS APPEAR)\""
 					}
 				},
 				{
@@ -14845,9 +16783,12 @@
 			],
 			"actions": [
 				{
-					"id": "close",
+					"id": "set-time-scale",
 					"objectClass": "System",
-					"sid": 999000000001302
+					"sid": 999000000001302,
+					"parameters": {
+						"time-scale": "0"
+					}
 				}
 			],
 			"sid": 999000000001299
@@ -14862,17 +16803,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sf_Menu_Botao"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "sf_Menu_Botao",
-					"sid": 999000000001401,
-					"parameters": {
-						"instance-variable": "Contexto",
-						"comparison": 0,
-						"value": "\"Voltar\""
+						"object-clicked": "btn_Tutorial_Back"
 					}
 				}
 			],
@@ -14880,10 +16811,19 @@
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 999000000001402,
+					"sid": 412307339222784,
 					"parameters": {
 						"layer": "\"Tutorial\"",
-						"visible": "false"
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 830733033404369,
+					"parameters": {
+						"layer": "\"Tutorial\"",
+						"interactive": false
 					}
 				},
 				{
@@ -14892,7 +16832,33 @@
 					"sid": 999000000001403,
 					"parameters": {
 						"layer": "\"Menu\"",
-						"visible": "true"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 999000000020211,
+					"parameters": {
+						"layer": "\"Menu\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 802642099771373,
+					"parameters": {
+						"layer": "\"Game\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 999000000001404,
+					"parameters": {
+						"time-scale": "0"
 					}
 				}
 			],
@@ -14927,7 +16893,7 @@
 					"objectClass": "sf_Tutorial_Titulo",
 					"sid": 999000000001502,
 					"parameters": {
-						"text": "\"SEUS PODERES\""
+						"text": "\"YOUR POWERS\""
 					}
 				},
 				{
@@ -14935,7 +16901,7 @@
 					"objectClass": "sf_Tutorial_Corpo",
 					"sid": 999000000001503,
 					"parameters": {
-						"text": "\"TOQUE  (2s)   — mova qualquer Porri.\" & newline & newline & \"RAIO   (5s)   — elimina Céticos e Fanáticos.\" & newline & newline & \"SUSSURRO (10s) — converte e fortalece Adeptos.\" & newline & newline & \"DILEMAS surgem a cada ~2 min e pausam o jogo.\" & newline & \"Toda escolha tem um custo. Não há resposta perfeita.\""
+						"text": "\"TOUCH  (2s)     - MOVE ANY PORRI.\" & newline & newline & \"LIGHTNING (5s) - REMOVE SKEPTICS AND FANATICS.\" & newline & newline & \"WHISPER (10s)  - CONVERT ENEMIES AND STRENGTHEN FOLLOWERS.\" & newline & newline & \"DILEMMAS APPEAR ABOUT EVERY 2 MINUTES AND PAUSE THE GAME.\" & newline & \"EVERY CHOICE HAS A COST. THERE IS NO PERFECT ANSWER.\""
 					}
 				},
 				{
@@ -14986,7 +16952,7 @@
 					"objectClass": "sf_Tutorial_Titulo",
 					"sid": 999000000001602,
 					"parameters": {
-						"text": "\"O MUNDO\""
+						"text": "\"THE WORLD\""
 					}
 				},
 				{
@@ -14994,7 +16960,7 @@
 					"objectClass": "sf_Tutorial_Corpo",
 					"sid": 999000000001603,
 					"parameters": {
-						"text": "\"ADEPTOS — fiéis comuns. Geram Fé e se reproduzem quando felizes.\" & newline & newline & \"CÉTICOS — duvidam. Reduzem Fé e afetam Adeptos próximos.\" & newline & newline & \"FANÁTICOS — surgem com Fé alta. Perseguem e matam.\" & newline & newline & \"FÉ:\" & newline & \"0–49   CETICISMO  (Céticos se espalham)\" & newline & \"50–70  EQUILÍBRIO (a civilização só evolui aqui)\" & newline & \"71–100 FANATISMO  (Fanáticos surgem)\""
+						"text": "\"FOLLOWERS - COMMON BELIEVERS. THEY GENERATE FAITH AND REPRODUCE WHEN HAPPY.\" & newline & newline & \"SKEPTICS - THEY DOUBT. THEY LOWER FAITH AND INFLUENCE NEARBY FOLLOWERS.\" & newline & newline & \"FANATICS - THEY APPEAR WHEN FAITH IS HIGH. THEY CHASE AND KILL.\" & newline & newline & \"FAITH:\" & newline & \"0-49    SKEPTICISM  (SKEPTICS SPREAD)\" & newline & \"50-70   BALANCE     (EVOLUTION ONLY HERE)\" & newline & \"71-100  FANATICISM  (FANATICS APPEAR)\""
 					}
 				},
 				{

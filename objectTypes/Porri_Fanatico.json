@@ -29,6 +29,11 @@
 	],
 	"behaviorTypes": [
 		{
+			"behaviorId": "Timer",
+			"name": "Cronômetro",
+			"sid": 991000000000003
+		},
+		{
 			"behaviorId": "Pathfinding",
 			"name": "Pathfinding",
 			"sid": 944100613839757

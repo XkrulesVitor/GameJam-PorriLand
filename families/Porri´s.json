@@ -72,11 +72,6 @@
 			"sid": 163887259112938
 		},
 		{
-			"behaviorId": "Timer",
-			"name": "Cronômetro",
-			"sid": 764197601332136
-		},
-		{
 			"behaviorId": "LOS",
 			"name": "CampoDeVisão",
 			"sid": 840317462785427

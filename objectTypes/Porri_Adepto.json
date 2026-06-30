@@ -13,7 +13,13 @@
 			"sid": 106586045999466
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Cronômetro",
+			"sid": 991000000000001
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

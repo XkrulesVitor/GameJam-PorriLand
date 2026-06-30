@@ -23,63 +23,63 @@
 		{
 			"type": "plugin",
 			"id": "Spritefont2",
-			"name": "Fonte de sprites",
+			"name": "Sprite font",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Tilemap",
-			"name": "Mosaico",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "LOS",
-			"name": "Campo de visão",
+			"name": "Line of sight",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pathfinding",
-			"name": "Explorador de rotas",
+			"name": "Pathfinding",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "TileMovement",
-			"name": "Movimento em grid",
+			"name": "Tile movement",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Timer",
-			"name": "Cronômetro",
+			"name": "Timer",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "bound",
-			"name": "Restrito ao layout",
+			"name": "Bound to",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Sólido",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -132,13 +132,19 @@
 			"UI_Pedra",
 			"FonteDeSprites",
 			"Elemento_Casa",
+			"Elemento_Chao_Cidade",
 			"Afogamento",
 			"sf_Menu_Botao",
 			"sf_Tutorial_Titulo",
 			"sf_Tutorial_Corpo",
 			"btn_Tutorial_Proximo",
 			"btn_Tutorial_Anterior",
-			"btn_Reiniciar"
+			"btn_Tutorial_Back",
+			"btn_Reiniciar",
+			"Imagem_Menu",
+			"btn_Play",
+			"btn_Tutorial_Menu",
+			"Imagem_Final"
 		],
 		"subfolders": []
 	},
