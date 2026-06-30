@@ -41,10 +41,9 @@ Fechado/funcionando:
 - Menu lateral de objetivos.
 - Dilemas raros de oração com pausa total e escolhas Sim/Não.
 - Ações aceitas que podem exigir `Raio` ou `Sussurro` em um alvo marcado.
+- Desastres naturais (ex: Furacão) implementados.
 
 Ainda planejado:
-
-- Desastres.
 - Áudio.
 - Balanceamento fino.
 - Eras além dos ganchos atuais.

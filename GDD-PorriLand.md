@@ -214,7 +214,7 @@ Algumas ideias foram recicladas como dilemas raros, mas a implementação antiga
 - [x] Modal de dilemas com pausa
 - [x] Dilemas com consequências positivas e negativas
 - [x] Alvos marcados para Raio e Sussurro
-- [ ] Desastres
+- [x] Desastres
 - [ ] Áudio
 - [ ] Eras 2–4 completas
 
@@ -222,6 +222,5 @@ Algumas ideias foram recicladas como dilemas raros, mas a implementação antiga
 
 1. Balancear frequência e valores dos dilemas.
 2. Adicionar novos dilemas por Era.
-3. Implementar desastres.
-4. Completar evolução visual e mecânica das Eras.
-5. Polir áudio e feedback.
+3. Completar evolução visual e mecânica das Eras.
+4. Polir áudio e feedback.

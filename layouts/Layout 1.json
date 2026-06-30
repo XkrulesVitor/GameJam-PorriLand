@@ -297,7 +297,7 @@
 				{
 					"type": "Txt_Estado",
 					"properties": {
-						"text": "Equilibribrado",
+						"text": "Equilibrado",
 						"enable-bbcode": true,
 						"font": "ThaleahFat",
 						"size": 20,
@@ -327,8 +327,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 28.512735666322293,
-						"y": 96.11779403686523,
+						"x": 35.37056952862698,
+						"y": 62.45466232299805,
 						"width": 251.23966942148755,
 						"height": 30,
 						"originX": 0,
@@ -677,12 +677,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 102.3826904296875,
-						"y": 607.7566528320312,
+						"x": 105,
+						"y": 630,
 						"width": 120,
 						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

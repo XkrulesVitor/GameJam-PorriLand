@@ -162,7 +162,16 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "ThaleahFat.ttf",
+					"type": "application/font-sfnt",
+					"sid": 574371543446164,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
@@ -235,7 +244,12 @@
 		"items": [
 			"Linha do tempo 1"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
 	},
 	"flowcharts": {
 		"items": [

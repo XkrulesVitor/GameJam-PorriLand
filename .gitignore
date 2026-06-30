@@ -1,2 +1,25 @@
+# Construct 3 editor state
 *.uistate.json
-ts-defs
+*.autosave
+*.autosave.c3proj
+
+# Auto-generated TypeScript definitions
+ts-defs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Agent and temporary scripts (optional, if you want to keep repo clean from agent scratches)
+# *.py
+
+# Pastas de agentes e docs extras
+/.agents/
+/.claude/
+/.superpowers/
+/docs/
