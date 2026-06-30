@@ -123,7 +123,7 @@
     },
     {
       "eventType": "variable",
-      "name": "Martírio_Protegeu",
+      "name": "MartÃ­rio_Protegeu",
       "type": "number",
       "initialValue": "0",
       "comment": "",
@@ -133,7 +133,7 @@
     },
     {
       "eventType": "variable",
-      "name": "Martírio_Ocorreu",
+      "name": "MartÃ­rio_Ocorreu",
       "type": "number",
       "initialValue": "0",
       "comment": "",
@@ -332,7 +332,7 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 426093821802008,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "random(90,150)",
                 "type": "once",
@@ -343,7 +343,7 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 626393768825255,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "random(90,130)",
                 "type": "once",
@@ -354,7 +354,7 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 940129668594202,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "10",
                 "type": "once",
@@ -363,18 +363,18 @@
             },
             {
               "id": "set-range",
-              "objectClass": "Porri´s",
+              "objectClass": "PorriÂ´s",
               "sid": 505900547021874,
-              "behaviorType": "CampoDeVisão",
+              "behaviorType": "CampoDeVisÃ£o",
               "parameters": {
                 "range": "200"
               }
             },
             {
               "id": "set-cone-of-view",
-              "objectClass": "Porri´s",
+              "objectClass": "PorriÂ´s",
               "sid": 721241560619267,
-              "behaviorType": "CampoDeVisão",
+              "behaviorType": "CampoDeVisÃ£o",
               "parameters": {
                 "cone-of-view": "360"
               }
@@ -420,7 +420,7 @@
                   "id": "start-timer",
                   "objectClass": "Porri_Adepto",
                   "sid": 718656268089171,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(0.5,2.5)",
                     "type": "regular",
@@ -486,7 +486,7 @@
                   "id": "on-timer",
                   "objectClass": "Porri_Adepto",
                   "sid": 526486406759496,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "tag": "\"Andar\""
                   }
@@ -512,7 +512,7 @@
                   "id": "on-timer",
                   "objectClass": "Porri_Cetico",
                   "sid": 571265246678100,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "tag": "\"Andar\""
                   }
@@ -738,7 +738,7 @@
                   "conditions": [
                     {
                       "id": "compare-instance-variable",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 491612195597263,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -750,7 +750,7 @@
                   "actions": [
                     {
                       "id": "simulate-control",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 187289201116935,
                       "behaviorType": "MovimentoEmGrid",
                       "parameters": {
@@ -759,7 +759,7 @@
                     },
                     {
                       "id": "set-instvar-value",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 808201097031146,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -774,7 +774,7 @@
                   "conditions": [
                     {
                       "id": "compare-instance-variable",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 100297774416508,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -786,7 +786,7 @@
                   "actions": [
                     {
                       "id": "simulate-control",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 573902478923944,
                       "behaviorType": "MovimentoEmGrid",
                       "parameters": {
@@ -795,7 +795,7 @@
                     },
                     {
                       "id": "set-instvar-value",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 398326557849467,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -810,7 +810,7 @@
                   "conditions": [
                     {
                       "id": "compare-instance-variable",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 368260998719013,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -822,7 +822,7 @@
                   "actions": [
                     {
                       "id": "simulate-control",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 244459176805652,
                       "behaviorType": "MovimentoEmGrid",
                       "parameters": {
@@ -831,7 +831,7 @@
                     },
                     {
                       "id": "set-instvar-value",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 605224078327375,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -846,7 +846,7 @@
                   "conditions": [
                     {
                       "id": "compare-instance-variable",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 966879750598406,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -858,7 +858,7 @@
                   "actions": [
                     {
                       "id": "simulate-control",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 610287061608993,
                       "behaviorType": "MovimentoEmGrid",
                       "parameters": {
@@ -867,7 +867,7 @@
                     },
                     {
                       "id": "set-instvar-value",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 986682975655455,
                       "parameters": {
                         "instance-variable": "Direcao",
@@ -987,18 +987,18 @@
                       "objectClass": "System",
                       "sid": 782761113139900,
                       "parameters": {
-                        "object": "Porri´s"
+                        "object": "PorriÂ´s"
                       }
                     }
                   ],
                   "actions": [
                     {
                       "id": "set-position",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 838312053233108,
                       "parameters": {
-                        "x": "clamp(Porri´s.X, 48, 1232)",
-                        "y": "clamp(Porri´s.Y, 48, 672)"
+                        "x": "clamp(PorriÂ´s.X, 48, 1232)",
+                        "y": "clamp(PorriÂ´s.Y, 48, 672)"
                       }
                     }
                   ],
@@ -1012,7 +1012,7 @@
                           "objectClass": "System",
                           "sid": 864325375417668,
                           "parameters": {
-                            "first-value": "Porri´s.X",
+                            "first-value": "PorriÂ´s.X",
                             "comparison": 2,
                             "second-value": "96"
                           }
@@ -1021,7 +1021,7 @@
                       "actions": [
                         {
                           "id": "set-instvar-value",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 465064455896758,
                           "parameters": {
                             "instance-variable": "Direcao",
@@ -1039,7 +1039,7 @@
                           "objectClass": "System",
                           "sid": 569204537285032,
                           "parameters": {
-                            "first-value": "Porri´s.X",
+                            "first-value": "PorriÂ´s.X",
                             "comparison": 4,
                             "second-value": "1184"
                           }
@@ -1048,7 +1048,7 @@
                       "actions": [
                         {
                           "id": "set-instvar-value",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 848684139633588,
                           "parameters": {
                             "instance-variable": "Direcao",
@@ -1066,7 +1066,7 @@
                           "objectClass": "System",
                           "sid": 435872793462560,
                           "parameters": {
-                            "first-value": "Porri´s.Y",
+                            "first-value": "PorriÂ´s.Y",
                             "comparison": 2,
                             "second-value": "96"
                           }
@@ -1075,7 +1075,7 @@
                       "actions": [
                         {
                           "id": "set-instvar-value",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 418118167151069,
                           "parameters": {
                             "instance-variable": "Direcao",
@@ -1093,7 +1093,7 @@
                           "objectClass": "System",
                           "sid": 579193335791124,
                           "parameters": {
-                            "first-value": "Porri´s.Y",
+                            "first-value": "PorriÂ´s.Y",
                             "comparison": 4,
                             "second-value": "624"
                           }
@@ -1102,7 +1102,7 @@
                       "actions": [
                         {
                           "id": "set-instvar-value",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 645719600918256,
                           "parameters": {
                             "instance-variable": "Direcao",
@@ -1150,15 +1150,15 @@
                       "objectClass": "System",
                       "sid": 684661204068753,
                       "parameters": {
-                        "object": "Porri´s"
+                        "object": "PorriÂ´s"
                       }
                     },
                     {
                       "id": "is-overlapping-another-object",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 120405507376951,
                       "parameters": {
-                        "object": "Porri´s"
+                        "object": "PorriÂ´s"
                       }
                     }
                   ],
@@ -1182,16 +1182,16 @@
                       "actions": [
                         {
                           "id": "set-position",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 934828213731924,
                           "parameters": {
-                            "x": "clamp(Porri´s.X + cos(Angulo_Separar) * 32, 48, 1232)",
-                            "y": "clamp(Porri´s.Y + sin(Angulo_Separar) * 32, 48, 672)"
+                            "x": "clamp(PorriÂ´s.X + cos(Angulo_Separar) * 32, 48, 1232)",
+                            "y": "clamp(PorriÂ´s.Y + sin(Angulo_Separar) * 32, 48, 672)"
                           }
                         },
                         {
                           "id": "set-instvar-value",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 167873059932494,
                           "parameters": {
                             "instance-variable": "Direcao",
@@ -1374,7 +1374,7 @@
             {
               "eventType": "group",
               "disabled": false,
-              "title": "Animação Procedural",
+              "title": "AnimaÃ§Ã£o Procedural",
               "description": "",
               "isActiveOnStart": true,
               "children": [
@@ -1383,27 +1383,27 @@
                   "conditions": [
                     {
                       "id": "on-created",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 920081568161357
                     }
                   ],
                   "actions": [
                     {
                       "id": "set-instvar-value",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 463829242815757,
                       "parameters": {
-                        "instance-variable": "Altura_Padrão",
-                        "value": "Porri´s.Height"
+                        "instance-variable": "Altura_PadrÃ£o",
+                        "value": "PorriÂ´s.Height"
                       }
                     },
                     {
                       "id": "set-instvar-value",
-                      "objectClass": "Porri´s",
+                      "objectClass": "PorriÂ´s",
                       "sid": 860152406816810,
                       "parameters": {
-                        "instance-variable": "Largura_Padrão",
-                        "value": "Porri´s.Width"
+                        "instance-variable": "Largura_PadrÃ£o",
+                        "value": "PorriÂ´s.Width"
                       }
                     }
                   ],
@@ -1422,7 +1422,7 @@
                       "objectClass": "System",
                       "sid": 218197386006329,
                       "parameters": {
-                        "object": "Porri´s"
+                        "object": "PorriÂ´s"
                       }
                     }
                   ],
@@ -1434,7 +1434,7 @@
                       "conditions": [
                         {
                           "id": "is-moving",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 599948821062183,
                           "behaviorType": "MovimentoEmGrid"
                         }
@@ -1442,18 +1442,18 @@
                       "actions": [
                         {
                           "id": "set-height",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 572625443840116,
                           "parameters": {
-                            "height": "Porri´s.Altura_Padrão - sin(time * 720 + Porri´s.UID * 25) * 6"
+                            "height": "PorriÂ´s.Altura_PadrÃ£o - sin(time * 720 + PorriÂ´s.UID * 25) * 6"
                           }
                         },
                         {
                           "id": "set-width",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 969020714041640,
                           "parameters": {
-                            "width": "Porri´s.Largura_Padrão + sin(time * 720 + Porri´s.UID * 25) * 6"
+                            "width": "PorriÂ´s.Largura_PadrÃ£o + sin(time * 720 + PorriÂ´s.UID * 25) * 6"
                           }
                         }
                       ],
@@ -1471,18 +1471,18 @@
                       "actions": [
                         {
                           "id": "set-height",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 378158714296659,
                           "parameters": {
-                            "height": "Porri´s.Altura_Padrão"
+                            "height": "PorriÂ´s.Altura_PadrÃ£o"
                           }
                         },
                         {
                           "id": "set-width",
-                          "objectClass": "Porri´s",
+                          "objectClass": "PorriÂ´s",
                           "sid": 221429682287495,
                           "parameters": {
-                            "width": "Porri´s.Largura_Padrão"
+                            "width": "PorriÂ´s.Largura_PadrÃ£o"
                           }
                         }
                       ],
@@ -1528,7 +1528,7 @@
                       "objectClass": "System",
                       "sid": 788529536317820,
                       "parameters": {
-                        "first-value": "Porri´s.Count",
+                        "first-value": "PorriÂ´s.Count",
                         "comparison": 2,
                         "second-value": "MaxPorris"
                       }
@@ -1613,7 +1613,7 @@
                           "id": "start-timer",
                           "objectClass": "Porri_Adepto",
                           "sid": 492309997902685,
-                          "behaviorType": "Cronômetro",
+                          "behaviorType": "CronÃ´metro",
                           "parameters": {
                             "duration": "random(0.5,2.5)",
                             "type": "regular",
@@ -1751,7 +1751,7 @@
                   "id": "start-timer",
                   "objectClass": "Porri_Cetico",
                   "sid": 731526224863721,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(0.5,2.5)",
                     "type": "regular",
@@ -1772,7 +1772,7 @@
         {
           "eventType": "group",
           "disabled": false,
-          "title": "Céticos",
+          "title": "CÃ©ticos",
           "description": "",
           "isActiveOnStart": true,
           "children": [
@@ -1790,7 +1790,7 @@
                       "id": "on-timer",
                       "objectClass": "Controlador",
                       "sid": 820656635247527,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "tag": "\"Cetico_Aleatorio\""
                       }
@@ -1832,7 +1832,7 @@
                       "id": "start-timer",
                       "objectClass": "Porri_Cetico",
                       "sid": 357786898847520,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "duration": "random(0.5,2.5)",
                         "type": "regular",
@@ -1866,7 +1866,7 @@
                           "id": "start-timer",
                           "objectClass": "Controlador",
                           "sid": 997183903913612,
-                          "behaviorType": "Cronômetro",
+                          "behaviorType": "CronÃ´metro",
                           "parameters": {
                             "duration": "20",
                             "type": "once",
@@ -1895,7 +1895,7 @@
                       "id": "is-timer-paused",
                       "objectClass": "Controlador",
                       "sid": 610511992005793,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "tag": "\"Cetico_Aleatorio\""
                       }
@@ -1906,7 +1906,7 @@
                       "id": "start-timer",
                       "objectClass": "Controlador",
                       "sid": 921782549650353,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "duration": "20",
                         "type": "once",
@@ -2014,7 +2014,7 @@
                       "id": "start-timer",
                       "objectClass": "Porri_Cetico",
                       "sid": 579069358339886,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "duration": "random(0.5,2.5)",
                         "type": "regular",
@@ -2035,7 +2035,7 @@
             {
               "eventType": "group",
               "disabled": false,
-              "title": "Dúvida",
+              "title": "DÃºvida",
               "description": "",
               "isActiveOnStart": true,
               "children": [
@@ -2205,7 +2205,7 @@
         {
           "eventType": "group",
           "disabled": false,
-          "title": "Fanáticos",
+          "title": "FanÃ¡ticos",
           "description": "",
           "isActiveOnStart": true,
           "children": [
@@ -3301,7 +3301,7 @@
                       "objectClass": "Mouse",
                       "sid": 830604342538439,
                       "parameters": {
-                        "object": "Porri´s"
+                        "object": "PorriÂ´s"
                       }
                     }
                   ],
@@ -3311,7 +3311,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 563694855208959,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3358,7 +3358,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 920000000000072,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3383,7 +3383,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 920000000000106,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3408,7 +3408,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 920000000000075,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3433,7 +3433,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 920000000000078,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3458,7 +3458,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 920000000000087,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3483,7 +3483,7 @@
                       "objectClass": "UI_Mouse",
                       "sid": 920000000000090,
                       "parameters": {
-                        "animation": "\"Mão\"",
+                        "animation": "\"MÃ£o\"",
                         "from": "beginning"
                       }
                     }
@@ -3502,7 +3502,7 @@
                   "parameters": {
                     "mouse-button": "left",
                     "click-type": "clicked",
-                    "object-clicked": "Porri´s"
+                    "object-clicked": "PorriÂ´s"
                   }
                 },
                 {
@@ -3543,7 +3543,7 @@
                   "sid": 930000000000012,
                   "parameters": {
                     "variable": "Porri_Puxado_UID",
-                    "value": "Porri´s.UID"
+                    "value": "PorriÂ´s.UID"
                   }
                 },
                 {
@@ -3552,7 +3552,7 @@
                   "sid": 930000000000013,
                   "parameters": {
                     "variable": "Porri_Puxado_Offset_X",
-                    "value": "Porri´s.X - Mouse.X(\"Game\")"
+                    "value": "PorriÂ´s.X - Mouse.X(\"Game\")"
                   }
                 },
                 {
@@ -3561,12 +3561,12 @@
                   "sid": 930000000000014,
                   "parameters": {
                     "variable": "Porri_Puxado_Offset_Y",
-                    "value": "Porri´s.Y - Mouse.Y(\"Game\")"
+                    "value": "PorriÂ´s.Y - Mouse.Y(\"Game\")"
                   }
                 },
                 {
                   "id": "set-instvar-value",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000015,
                   "parameters": {
                     "instance-variable": "Direcao",
@@ -3575,7 +3575,7 @@
                 },
                 {
                   "id": "move-to-top",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000016
                 }
               ],
@@ -3612,8 +3612,8 @@
                   "objectClass": "System",
                   "sid": 930000000000020,
                   "parameters": {
-                    "object": "Porri´s",
-                    "expression": "Porri´s.UID",
+                    "object": "PorriÂ´s",
+                    "expression": "PorriÂ´s.UID",
                     "comparison": 0,
                     "value": "Porri_Puxado_UID"
                   }
@@ -3622,7 +3622,7 @@
               "actions": [
                 {
                   "id": "set-position",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000021,
                   "parameters": {
                     "x": "clamp(Mouse.X(\"Game\") + Porri_Puxado_Offset_X, 48, 1232)",
@@ -3631,7 +3631,7 @@
                 },
                 {
                   "id": "set-instvar-value",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000022,
                   "parameters": {
                     "instance-variable": "Direcao",
@@ -3640,7 +3640,7 @@
                 },
                 {
                   "id": "set-visible",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000023,
                   "parameters": {
                     "visibility": "invisible"
@@ -3707,8 +3707,8 @@
                   "objectClass": "System",
                   "sid": 930000000000029,
                   "parameters": {
-                    "object": "Porri´s",
-                    "expression": "Porri´s.UID",
+                    "object": "PorriÂ´s",
+                    "expression": "PorriÂ´s.UID",
                     "comparison": 0,
                     "value": "Porri_Puxado_UID"
                   }
@@ -3717,7 +3717,7 @@
               "actions": [
                 {
                   "id": "set-instvar-value",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000030,
                   "parameters": {
                     "instance-variable": "Direcao",
@@ -3726,7 +3726,7 @@
                 },
                 {
                   "id": "set-visible",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000104,
                   "parameters": {
                     "visibility": "visible"
@@ -3862,8 +3862,8 @@
                   "objectClass": "System",
                   "sid": 930000000000044,
                   "parameters": {
-                    "object": "Porri´s",
-                    "expression": "Porri´s.UID",
+                    "object": "PorriÂ´s",
+                    "expression": "PorriÂ´s.UID",
                     "comparison": 0,
                     "value": "Porri_Puxado_UID"
                   }
@@ -3872,7 +3872,7 @@
               "actions": [
                 {
                   "id": "set-instvar-value",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000045,
                   "parameters": {
                     "instance-variable": "Direcao",
@@ -3881,7 +3881,7 @@
                 },
                 {
                   "id": "set-visible",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000105,
                   "parameters": {
                     "visibility": "visible"
@@ -3958,8 +3958,8 @@
                   "objectClass": "System",
                   "sid": 930000000000053,
                   "parameters": {
-                    "object": "Porri´s",
-                    "expression": "Porri´s.UID",
+                    "object": "PorriÂ´s",
+                    "expression": "PorriÂ´s.UID",
                     "comparison": 0,
                     "value": "Porri_Puxado_UID"
                   }
@@ -3968,7 +3968,7 @@
               "actions": [
                 {
                   "id": "set-instvar-value",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000054,
                   "parameters": {
                     "instance-variable": "Direcao",
@@ -3977,7 +3977,7 @@
                 },
                 {
                   "id": "set-visible",
-                  "objectClass": "Porri´s",
+                  "objectClass": "PorriÂ´s",
                   "sid": 930000000000106,
                   "parameters": {
                     "visibility": "visible"
@@ -4096,7 +4096,7 @@
         {
           "eventType": "group",
           "disabled": false,
-          "title": "Atualizar Fé",
+          "title": "Atualizar FÃ©",
           "description": "",
           "isActiveOnStart": true,
           "children": [
@@ -4339,6 +4339,154 @@
                   "sid": 498340234646022
                 }
               ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000010,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000011,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000012,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 2,
+                    "second-value": "66"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-color",
+                  "objectClass": "ponteiro_Fe",
+                  "sid": 990000000000013,
+                  "parameters": {
+                    "color": "rgbEx(60, 180, 60)"
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000014,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000015,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "66"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000016,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 2,
+                    "second-value": "80"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-color",
+                  "objectClass": "ponteiro_Fe",
+                  "sid": 990000000000017,
+                  "parameters": {
+                    "color": "rgbEx(220, 140, 30)"
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "Txt_Estado",
+                  "sid": 990000000000018,
+                  "parameters": {
+                    "text": "\"⚠ FÉ ELEVADA\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000019,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000020,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "80"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-color",
+                  "objectClass": "ponteiro_Fe",
+                  "sid": 990000000000021,
+                  "parameters": {
+                    "color": "rgbEx(210, 40, 40)"
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "Txt_Estado",
+                  "sid": 990000000000022,
+                  "parameters": {
+                    "text": "\"O POVO ESTÁ EXALTADO\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000023,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000024,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 2,
+                    "second-value": "31"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-color",
+                  "objectClass": "ponteiro_Fe",
+                  "sid": 990000000000025,
+                  "parameters": {
+                    "color": "rgbEx(60, 100, 200)"
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "Txt_Estado",
+                  "sid": 990000000000026,
+                  "parameters": {
+                    "text": "\"A FÉ ENFRAQUECE\""
+                  }
+                }
+              ]
             }
           ],
           "sid": 597629320293491
@@ -4349,7 +4497,7 @@
     {
       "eventType": "group",
       "disabled": false,
-      "title": "Evolução",
+      "title": "EvoluÃ§Ã£o",
       "description": "",
       "isActiveOnStart": true,
       "children": [
@@ -5450,7 +5598,7 @@
               "objectClass": "txt_Era",
               "sid": 200000000000077,
               "parameters": {
-                "text": "\"Metrópole\""
+                "text": "\"MetrÃ³pole\""
               }
             },
             {
@@ -6134,7 +6282,7 @@
               "objectClass": "txt_Era",
               "sid": 200000000000077,
               "parameters": {
-                "text": "\"Metrópole\""
+                "text": "\"MetrÃ³pole\""
               }
             },
             {
@@ -6818,7 +6966,7 @@
               "objectClass": "txt_Era",
               "sid": 200000000000077,
               "parameters": {
-                "text": "\"Metrópole\""
+                "text": "\"MetrÃ³pole\""
               }
             },
             {
@@ -7534,7 +7682,7 @@
         {
           "eventType": "group",
           "disabled": false,
-          "title": "Poderes - Seleção",
+          "title": "Poderes - SeleÃ§Ã£o",
           "description": "",
           "isActiveOnStart": true,
           "children": [
@@ -8177,7 +8325,7 @@
                   "id": "start-timer",
                   "objectClass": "Raio",
                   "sid": 301364743295856,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "0.35",
                     "type": "once",
@@ -8366,7 +8514,7 @@
                   "id": "start-timer",
                   "objectClass": "Raio",
                   "sid": 886241884626595,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "0.35",
                     "type": "once",
@@ -8509,7 +8657,7 @@
                   "id": "start-timer",
                   "objectClass": "Sussurro",
                   "sid": 735756435583525,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "0.45",
                     "type": "once",
@@ -8551,7 +8699,7 @@
                   "id": "start-timer",
                   "objectClass": "Porri_Adepto",
                   "sid": 133965663079570,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(0.5,2.5)",
                     "type": "regular",
@@ -8562,7 +8710,7 @@
                   "id": "start-timer",
                   "objectClass": "Porri_Adepto",
                   "sid": 481598681195626,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "4",
                     "type": "once",
@@ -8593,7 +8741,7 @@
                   "id": "on-timer",
                   "objectClass": "Porri_Adepto",
                   "sid": 545432009322397,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "tag": "\"Fim_Imune\""
                   }
@@ -8783,7 +8931,7 @@
                   "id": "on-timer",
                   "objectClass": "Raio",
                   "sid": 360972485415689,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "tag": "\"VFX\""
                   }
@@ -8805,7 +8953,7 @@
                   "id": "on-timer",
                   "objectClass": "Sussurro",
                   "sid": 974669080551586,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "tag": "\"VFX\""
                   }
@@ -9013,7 +9161,7 @@
               "id": "on-timer",
               "objectClass": "Controlador",
               "sid": 140093898520709,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "tag": "\"Dilema\""
               }
@@ -9718,7 +9866,7 @@
                   "id": "start-timer",
                   "objectClass": "Controlador",
                   "sid": 349396282002666,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(90,150)",
                     "type": "once",
@@ -9776,7 +9924,7 @@
                       "id": "start-timer",
                       "objectClass": "Porri_Cetico",
                       "sid": 448610719580220,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "duration": "random(0.5,2.5)",
                         "type": "regular",
@@ -10150,7 +10298,7 @@
                   "id": "start-timer",
                   "objectClass": "Controlador",
                   "sid": 339586075949073,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(90,150)",
                     "type": "once",
@@ -10200,7 +10348,7 @@
                       "id": "start-timer",
                       "objectClass": "Porri_Fanatico",
                       "sid": 510820394610529,
-                      "behaviorType": "Cronômetro",
+                      "behaviorType": "CronÃ´metro",
                       "parameters": {
                         "duration": "random(0.5,2.5)",
                         "type": "regular",
@@ -10260,7 +10408,7 @@
                   "id": "start-timer",
                   "objectClass": "Porri_Cetico",
                   "sid": 761662219730586,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(0.5,2.5)",
                     "type": "regular",
@@ -10312,7 +10460,7 @@
                   "id": "start-timer",
                   "objectClass": "Controlador",
                   "sid": 340010139766019,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(90,150)",
                     "type": "once",
@@ -10397,7 +10545,7 @@
                   "id": "start-timer",
                   "objectClass": "Controlador",
                   "sid": 630568163103675,
-                  "behaviorType": "Cronômetro",
+                  "behaviorType": "CronÃ´metro",
                   "parameters": {
                     "duration": "random(90,150)",
                     "type": "once",
@@ -10539,7 +10687,7 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 529710415911825,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "random(90,150)",
                 "type": "once",
@@ -10656,7 +10804,7 @@
               "id": "start-timer",
               "objectClass": "Raio",
               "sid": 385563489478783,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "0.35",
                 "type": "once",
@@ -10740,11 +10888,20 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 410256233510406,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "random(90,150)",
                 "type": "once",
                 "tag": "\"Dilema\""
+              }
+            },
+            {
+              "id": "set-eventvar-value",
+              "objectClass": "System",
+              "sid": 990000000000027,
+              "parameters": {
+                "variable": "Raio_Nunca_Adepto",
+                "value": "0"
               }
             }
           ],
@@ -10857,7 +11014,7 @@
               "id": "start-timer",
               "objectClass": "Sussurro",
               "sid": 958115423969808,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "0.45",
                 "type": "once",
@@ -10936,7 +11093,7 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 998291389101467,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "random(90,150)",
                 "type": "once",
@@ -10952,7 +11109,7 @@
     {
       "eventType": "group",
       "disabled": false,
-      "title": "Desastre - Furacão",
+      "title": "Desastre - FuracÃ£o",
       "description": "",
       "isActiveOnStart": true,
       "children": [
@@ -10963,7 +11120,7 @@
               "id": "on-timer",
               "objectClass": "Controlador",
               "sid": 770000000000001,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "tag": "\"Desastre\""
               }
@@ -10987,7 +11144,7 @@
               "id": "start-timer",
               "objectClass": "Controlador",
               "sid": 770000000000003,
-              "behaviorType": "Cronômetro",
+              "behaviorType": "CronÃ´metro",
               "parameters": {
                 "duration": "random(90,150)",
                 "type": "once",
