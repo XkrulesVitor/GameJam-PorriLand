@@ -9788,11 +9788,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-mouse-button-pressed",
+									"id": "mouse-button-is-down",
 									"objectClass": "Mouse",
 									"sid": 990000000000051,
 									"parameters": {
-										"mouse-button": 0
+										"mouse-button": "left"
 									}
 								},
 								{
